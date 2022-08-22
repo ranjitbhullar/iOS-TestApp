@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TestApp
+
+  Created by Ranjit Singh
+  
+*/
+
+"list_screen_title" = "Friends";
+"detail_screen_title" = "Friend";
+"view_more_detail" = " View More Detail ";
+"error_message" = "Error Message";
+"friends_service_failed" = "Friends serivce failed error";
+"repository_failed" = "Repository Failed Error";
+"usecase_failed" = "Use Case Failed Error";
+"cell_not_found" = "Cell not found";
+"storyboard_failed" = "Unable to Instantiate View Controller With Storyboard";
