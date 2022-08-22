@@ -22,6 +22,14 @@
                BlueprintName = "TestAppUITests"
                ReferencedContainer = "container:TestApp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TestAppUITests">
+               </Test>
+               <Test
+                  Identifier = "TestAppUITestsLaunchTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
