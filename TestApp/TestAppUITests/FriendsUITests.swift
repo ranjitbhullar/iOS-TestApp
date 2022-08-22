@@ -53,6 +53,7 @@ class FriendsUITests: XCTestCase {
         
         let friendsTableView = app.tables["FriendsTableView"]
         XCTAssertTrue(friendsTableView.exists, "The friends tableview exists")
+        captureScreenShotWith(name: "FriendsListScreen")
         
         //Gets an array of cells
         let tableCells = friendsTableView.cells
