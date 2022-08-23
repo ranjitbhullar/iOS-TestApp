@@ -8,7 +8,6 @@
 import Foundation
 import PromiseKit
 
-/// Passes data to service layer and returns back response 
 class FriendsRepository: FriendsRepositoryProtocol {
     
     private let dataStore: FriendsDataStoreProtocol
