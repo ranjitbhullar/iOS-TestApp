@@ -39,21 +39,14 @@
 		B725CDF728AE8A7F002B0743 /* FriendsDetailUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDF528AE8A7F002B0743 /* FriendsDetailUseCaseProtocol.swift */; };
 		B725CDFC28AE8AD6002B0743 /* FriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDFA28AE8AD6002B0743 /* FriendsListViewModel.swift */; };
 		B725CDFD28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDFB28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift */; };
-		B725CE0128AE8B58002B0743 /* FriendsListPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0028AE8B58002B0743 /* FriendsListPresentationModel.swift */; };
 		B725CE0328AE8C7F002B0743 /* FriendsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0228AE8C7F002B0743 /* FriendsModule.swift */; };
-		B725CE0928AE8DAD002B0743 /* FirendsPresentationModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0728AE8DAD002B0743 /* FirendsPresentationModelMapper.swift */; };
-		B725CE0A28AE8DAD002B0743 /* FirendsPresentationModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0828AE8DAD002B0743 /* FirendsPresentationModelMapperProtocol.swift */; };
 		B725CE0E28AE8E88002B0743 /* FriendsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0C28AE8E88002B0743 /* FriendsListRow.swift */; };
 		B725CE0F28AE8E88002B0743 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0D28AE8E88002B0743 /* FriendsListView.swift */; };
 		B725CE1228AE9077002B0743 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1128AE9077002B0743 /* FriendDetailView.swift */; };
-		B725CE1628AE9150002B0743 /* FirendPresentationModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1428AE9150002B0743 /* FirendPresentationModelMapperProtocol.swift */; };
-		B725CE1728AE9150002B0743 /* FirendPresentationModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1528AE9150002B0743 /* FirendPresentationModelMapper.swift */; };
-		B725CE1A28AE9176002B0743 /* FriendDetailPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1928AE9176002B0743 /* FriendDetailPresentationModel.swift */; };
 		B725CE1E28AEA444002B0743 /* FriendsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1C28AEA444002B0743 /* FriendsDetailViewModel.swift */; };
 		B725CE1F28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1D28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift */; };
 		B725CE4E28AF7E08002B0743 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE4D28AF7E08002B0743 /* TestAppTests.swift */; };
 		B725CE5928AF7E88002B0743 /* CacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5828AF7E88002B0743 /* CacheManagerTest.swift */; };
-		B725CE5B28AF7E9C002B0743 /* Friends.json in Resources */ = {isa = PBXBuildFile; fileRef = B725CE5A28AF7E9C002B0743 /* Friends.json */; };
 		B725CE5E28AF7EAD002B0743 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5C28AF7EAD002B0743 /* NetworkManagerTest.swift */; };
 		B725CE5F28AF7EAD002B0743 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5D28AF7EAD002B0743 /* MockURLProtocol.swift */; };
 		B725CE6128AF7EBC002B0743 /* MockFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6028AF7EBC002B0743 /* MockFriendsData.swift */; };
@@ -64,7 +57,6 @@
 		B725CE7028AF8238002B0743 /* MockFriendsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6928AF8238002B0743 /* MockFriendsDataStore.swift */; };
 		B725CE7128AF8238002B0743 /* MockFriendsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6A28AF8238002B0743 /* MockFriendsRepository.swift */; };
 		B725CE7228AF8238002B0743 /* MockFriendsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6B28AF8238002B0743 /* MockFriendsNetworkManager.swift */; };
-		B725CE7328AF8238002B0743 /* MockFriendsPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6C28AF8238002B0743 /* MockFriendsPresentationModel.swift */; };
 		B725CE7428AF8238002B0743 /* MockFriendsListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6D28AF8238002B0743 /* MockFriendsListUseCase.swift */; };
 		B725CE7528AF8238002B0743 /* MockFriendsDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6E28AF8238002B0743 /* MockFriendsDomainModel.swift */; };
 		B725CE7628AF8238002B0743 /* MockFriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6F28AF8238002B0743 /* MockFriendsService.swift */; };
@@ -74,15 +66,16 @@
 		B725CE8428AF8352002B0743 /* FriendsListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE8328AF8352002B0743 /* FriendsListUseCaseTest.swift */; };
 		B725CE8728AF838B002B0743 /* FriendsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE8628AF838B002B0743 /* FriendsListViewModelTest.swift */; };
 		B725CE8B28AF848D002B0743 /* MockFriendDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE8A28AF848D002B0743 /* MockFriendDetailUseCase.swift */; };
-		B725CE8D28AF84A8002B0743 /* MockFriendDetailPresentationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE8C28AF84A8002B0743 /* MockFriendDetailPresentationData.swift */; };
 		B725CE8F28AF84C6002B0743 /* MockFriendDetailDomainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE8E28AF84C6002B0743 /* MockFriendDetailDomainData.swift */; };
 		B725CE9128AF850E002B0743 /* FriendDetailUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE9028AF850E002B0743 /* FriendDetailUseCaseTest.swift */; };
 		B725CE9328AF8595002B0743 /* FriendDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE9228AF8595002B0743 /* FriendDetailViewModelTest.swift */; };
 		B725CED928AF8A53002B0743 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CED728AF89ED002B0743 /* SafariView.swift */; };
 		B725CEDD28AFA18E002B0743 /* DataToDomainMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CEDB28AFA18E002B0743 /* DataToDomainMapperTest.swift */; };
-		B725CEDE28AFA18E002B0743 /* DomainToPresentationMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CEDC28AFA18E002B0743 /* DomainToPresentationMapperTest.swift */; };
 		B725CEE128AFA230002B0743 /* FriendsModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CEE028AFA230002B0743 /* FriendsModuleTest.swift */; };
 		B725CEE528B3450A002B0743 /* FriendsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */; };
+		B7434D2928B8F71500E6AAE4 /* FriendsListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */; };
+		B7434D2B28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */; };
+		B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,22 +143,15 @@
 		B725CDF528AE8A7F002B0743 /* FriendsDetailUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailUseCaseProtocol.swift; sourceTree = "<group>"; };
 		B725CDFA28AE8AD6002B0743 /* FriendsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewModel.swift; sourceTree = "<group>"; };
 		B725CDFB28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewModelProtocol.swift; sourceTree = "<group>"; };
-		B725CE0028AE8B58002B0743 /* FriendsListPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListPresentationModel.swift; sourceTree = "<group>"; };
 		B725CE0228AE8C7F002B0743 /* FriendsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsModule.swift; sourceTree = "<group>"; };
-		B725CE0728AE8DAD002B0743 /* FirendsPresentationModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendsPresentationModelMapper.swift; sourceTree = "<group>"; };
-		B725CE0828AE8DAD002B0743 /* FirendsPresentationModelMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendsPresentationModelMapperProtocol.swift; sourceTree = "<group>"; };
 		B725CE0C28AE8E88002B0743 /* FriendsListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRow.swift; sourceTree = "<group>"; };
 		B725CE0D28AE8E88002B0743 /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		B725CE1128AE9077002B0743 /* FriendDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
-		B725CE1428AE9150002B0743 /* FirendPresentationModelMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendPresentationModelMapperProtocol.swift; sourceTree = "<group>"; };
-		B725CE1528AE9150002B0743 /* FirendPresentationModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendPresentationModelMapper.swift; sourceTree = "<group>"; };
-		B725CE1928AE9176002B0743 /* FriendDetailPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailPresentationModel.swift; sourceTree = "<group>"; };
 		B725CE1C28AEA444002B0743 /* FriendsDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewModel.swift; sourceTree = "<group>"; };
 		B725CE1D28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		B725CE4B28AF7E08002B0743 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B725CE4D28AF7E08002B0743 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		B725CE5828AF7E88002B0743 /* CacheManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManagerTest.swift; sourceTree = "<group>"; };
-		B725CE5A28AF7E9C002B0743 /* Friends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Friends.json; sourceTree = "<group>"; };
 		B725CE5C28AF7EAD002B0743 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		B725CE5D28AF7EAD002B0743 /* MockURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		B725CE6028AF7EBC002B0743 /* MockFriendsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsData.swift; sourceTree = "<group>"; };
@@ -175,7 +161,6 @@
 		B725CE6928AF8238002B0743 /* MockFriendsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsDataStore.swift; sourceTree = "<group>"; };
 		B725CE6A28AF8238002B0743 /* MockFriendsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsRepository.swift; sourceTree = "<group>"; };
 		B725CE6B28AF8238002B0743 /* MockFriendsNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsNetworkManager.swift; sourceTree = "<group>"; };
-		B725CE6C28AF8238002B0743 /* MockFriendsPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsPresentationModel.swift; sourceTree = "<group>"; };
 		B725CE6D28AF8238002B0743 /* MockFriendsListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsListUseCase.swift; sourceTree = "<group>"; };
 		B725CE6E28AF8238002B0743 /* MockFriendsDomainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsDomainModel.swift; sourceTree = "<group>"; };
 		B725CE6F28AF8238002B0743 /* MockFriendsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsService.swift; sourceTree = "<group>"; };
@@ -185,15 +170,16 @@
 		B725CE8328AF8352002B0743 /* FriendsListUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListUseCaseTest.swift; sourceTree = "<group>"; };
 		B725CE8628AF838B002B0743 /* FriendsListViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewModelTest.swift; sourceTree = "<group>"; };
 		B725CE8A28AF848D002B0743 /* MockFriendDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendDetailUseCase.swift; sourceTree = "<group>"; };
-		B725CE8C28AF84A8002B0743 /* MockFriendDetailPresentationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendDetailPresentationData.swift; sourceTree = "<group>"; };
 		B725CE8E28AF84C6002B0743 /* MockFriendDetailDomainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendDetailDomainData.swift; sourceTree = "<group>"; };
 		B725CE9028AF850E002B0743 /* FriendDetailUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailUseCaseTest.swift; sourceTree = "<group>"; };
 		B725CE9228AF8595002B0743 /* FriendDetailViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewModelTest.swift; sourceTree = "<group>"; };
 		B725CED728AF89ED002B0743 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		B725CEDB28AFA18E002B0743 /* DataToDomainMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataToDomainMapperTest.swift; sourceTree = "<group>"; };
-		B725CEDC28AFA18E002B0743 /* DomainToPresentationMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainToPresentationMapperTest.swift; sourceTree = "<group>"; };
 		B725CEE028AFA230002B0743 /* FriendsModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModuleTest.swift; sourceTree = "<group>"; };
 		B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModel.swift; sourceTree = "<group>"; };
+		B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModelProtocol.swift; sourceTree = "<group>"; };
+		B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFriendDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,8 +269,6 @@
 			children = (
 				B725CE0428AE8D2C002B0743 /* View */,
 				B725CDF828AE8A8D002B0743 /* ViewModel */,
-				B725CDFE28AE8B33002B0743 /* PresentationModel */,
-				B725CE0528AE8D8B002B0743 /* Mapper */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -480,25 +464,10 @@
 		B725CDF928AE8A95002B0743 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */,
+				B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */,
 				B725CDFB28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift */,
 				B725CDFA28AE8AD6002B0743 /* FriendsListViewModel.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		B725CDFE28AE8B33002B0743 /* PresentationModel */ = {
-			isa = PBXGroup;
-			children = (
-				B725CDFF28AE8B3E002B0743 /* List */,
-				B725CE1828AE9163002B0743 /* Detail */,
-			);
-			path = PresentationModel;
-			sourceTree = "<group>";
-		};
-		B725CDFF28AE8B3E002B0743 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE0028AE8B58002B0743 /* FriendsListPresentationModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -511,24 +480,6 @@
 				B725CED628AF89C2002B0743 /* SafariView */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B725CE0528AE8D8B002B0743 /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE0628AE8D94002B0743 /* List */,
-				B725CE1328AE9135002B0743 /* Detail */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		B725CE0628AE8D94002B0743 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE0728AE8DAD002B0743 /* FirendsPresentationModelMapper.swift */,
-				B725CE0828AE8DAD002B0743 /* FirendsPresentationModelMapperProtocol.swift */,
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		B725CE0B28AE8E6F002B0743 /* List */ = {
@@ -544,23 +495,6 @@
 			isa = PBXGroup;
 			children = (
 				B725CE1128AE9077002B0743 /* FriendDetailView.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		B725CE1328AE9135002B0743 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE1528AE9150002B0743 /* FirendPresentationModelMapper.swift */,
-				B725CE1428AE9150002B0743 /* FirendPresentationModelMapperProtocol.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		B725CE1828AE9163002B0743 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE1928AE9176002B0743 /* FriendDetailPresentationModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -587,7 +521,6 @@
 				B725CE5728AF7E3E002B0743 /* Cache */,
 				B725CE8528AF8379002B0743 /* ViewModels */,
 				B725CEDF28AFA205002B0743 /* FriendsModule */,
-				B725CE5628AF7E35002B0743 /* Resource */,
 				B725CE4D28AF7E08002B0743 /* TestAppTests.swift */,
 			);
 			path = TestAppTests;
@@ -606,12 +539,10 @@
 			isa = PBXGroup;
 			children = (
 				B725CE8E28AF84C6002B0743 /* MockFriendDetailDomainData.swift */,
-				B725CE8C28AF84A8002B0743 /* MockFriendDetailPresentationData.swift */,
 				B725CE8A28AF848D002B0743 /* MockFriendDetailUseCase.swift */,
 				B725CE6928AF8238002B0743 /* MockFriendsDataStore.swift */,
 				B725CE6E28AF8238002B0743 /* MockFriendsDomainModel.swift */,
 				B725CE6B28AF8238002B0743 /* MockFriendsNetworkManager.swift */,
-				B725CE6C28AF8238002B0743 /* MockFriendsPresentationModel.swift */,
 				B725CE6A28AF8238002B0743 /* MockFriendsRepository.swift */,
 				B725CE6F28AF8238002B0743 /* MockFriendsService.swift */,
 				B725CE6D28AF8238002B0743 /* MockFriendsListUseCase.swift */,
@@ -619,16 +550,9 @@
 				B725CE6528AF8214002B0743 /* MockFriendDetailDomainModel.swift */,
 				B725CE6328AF81EA002B0743 /* MockCacheManager.swift */,
 				B725CE6028AF7EBC002B0743 /* MockFriendsData.swift */,
+				B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		B725CE5628AF7E35002B0743 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B725CE5A28AF7E9C002B0743 /* Friends.json */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		B725CE5728AF7E3E002B0743 /* Cache */ = {
@@ -693,7 +617,6 @@
 			isa = PBXGroup;
 			children = (
 				B725CEDB28AFA18E002B0743 /* DataToDomainMapperTest.swift */,
-				B725CEDC28AFA18E002B0743 /* DomainToPresentationMapperTest.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -835,7 +758,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B725CE5B28AF7E9C002B0743 /* Friends.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,17 +769,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B725CDC128AE86F4002B0743 /* CacheManagerProtocol.swift in Sources */,
-				B725CE0A28AE8DAD002B0743 /* FirendsPresentationModelMapperProtocol.swift in Sources */,
 				B725CDB828AE8658002B0743 /* NetworkManagerProtocol.swift in Sources */,
 				B725CE1F28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift in Sources */,
 				B725CDE228AE89BB002B0743 /* FriendsDataStore.swift in Sources */,
 				B725CDF628AE8A7F002B0743 /* FriendsDetailUseCase.swift in Sources */,
 				B71A93F028AE62F10005D408 /* ContentView.swift in Sources */,
-				B725CE1628AE9150002B0743 /* FirendPresentationModelMapperProtocol.swift in Sources */,
 				B725CE1228AE9077002B0743 /* FriendDetailView.swift in Sources */,
 				B725CDB728AE8658002B0743 /* NetworkManger.swift in Sources */,
 				B725CDEA28AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift in Sources */,
-				B725CE1A28AE9176002B0743 /* FriendDetailPresentationModel.swift in Sources */,
 				B725CDF728AE8A7F002B0743 /* FriendsDetailUseCaseProtocol.swift in Sources */,
 				B725CDC628AE873D002B0743 /* FriendsServiceProtocol.swift in Sources */,
 				B725CDF028AE8A61002B0743 /* FriendsListUseCaseProtocol.swift in Sources */,
@@ -868,21 +787,20 @@
 				B725CE0F28AE8E88002B0743 /* FriendsListView.swift in Sources */,
 				B725CDE528AE89E7002B0743 /* FirendsDataToDomainMapper.swift in Sources */,
 				B725CDC528AE873D002B0743 /* FriendsService.swift in Sources */,
-				B725CE0928AE8DAD002B0743 /* FirendsPresentationModelMapper.swift in Sources */,
 				B725CDDE28AE8990002B0743 /* FriendDetailDomainModel.swift in Sources */,
 				B725CDFD28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift in Sources */,
-				B725CE0128AE8B58002B0743 /* FriendsListPresentationModel.swift in Sources */,
 				B725CDC028AE86F4002B0743 /* CacheManager.swift in Sources */,
 				B725CED928AF8A53002B0743 /* SafariView.swift in Sources */,
+				B7434D2928B8F71500E6AAE4 /* FriendsListRowViewModel.swift in Sources */,
 				B725CDE128AE89BB002B0743 /* FriendsDataStoreProtocol.swift in Sources */,
 				B71A93EE28AE62F10005D408 /* TestAppApp.swift in Sources */,
 				B725CE1E28AEA444002B0743 /* FriendsDetailViewModel.swift in Sources */,
 				B725CDE628AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift in Sources */,
-				B725CE1728AE9150002B0743 /* FirendPresentationModelMapper.swift in Sources */,
 				B725CDCE28AE8818002B0743 /* FriendsDataModel.swift in Sources */,
 				B725CDD728AE888D002B0743 /* FriendsRepository.swift in Sources */,
 				B725CDFC28AE8AD6002B0743 /* FriendsListViewModel.swift in Sources */,
 				B725CEE528B3450A002B0743 /* FriendsRepositoryProtocol.swift in Sources */,
+				B7434D2B28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift in Sources */,
 				B725CDCB28AE87D1002B0743 /* AppConstants.swift in Sources */,
 				B725CE0328AE8C7F002B0743 /* FriendsModule.swift in Sources */,
 			);
@@ -905,7 +823,6 @@
 				B725CE8728AF838B002B0743 /* FriendsListViewModelTest.swift in Sources */,
 				B725CE5E28AF7EAD002B0743 /* NetworkManagerTest.swift in Sources */,
 				B725CE8F28AF84C6002B0743 /* MockFriendDetailDomainData.swift in Sources */,
-				B725CEDE28AFA18E002B0743 /* DomainToPresentationMapperTest.swift in Sources */,
 				B725CE5928AF7E88002B0743 /* CacheManagerTest.swift in Sources */,
 				B725CE4E28AF7E08002B0743 /* TestAppTests.swift in Sources */,
 				B725CE7528AF8238002B0743 /* MockFriendsDomainModel.swift in Sources */,
@@ -919,8 +836,6 @@
 				B725CE8B28AF848D002B0743 /* MockFriendDetailUseCase.swift in Sources */,
 				B725CEE128AFA230002B0743 /* FriendsModuleTest.swift in Sources */,
 				B725CE9328AF8595002B0743 /* FriendDetailViewModelTest.swift in Sources */,
-				B725CE7328AF8238002B0743 /* MockFriendsPresentationModel.swift in Sources */,
-				B725CE8D28AF84A8002B0743 /* MockFriendDetailPresentationData.swift in Sources */,
 				B725CE7228AF8238002B0743 /* MockFriendsNetworkManager.swift in Sources */,
 				B725CE7128AF8238002B0743 /* MockFriendsRepository.swift in Sources */,
 				B725CE7428AF8238002B0743 /* MockFriendsListUseCase.swift in Sources */,
@@ -930,6 +845,7 @@
 				B725CE5F28AF7EAD002B0743 /* MockURLProtocol.swift in Sources */,
 				B725CE9128AF850E002B0743 /* FriendDetailUseCaseTest.swift in Sources */,
 				B725CE7928AF828F002B0743 /* FriendsServiceTest.swift in Sources */,
+				B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

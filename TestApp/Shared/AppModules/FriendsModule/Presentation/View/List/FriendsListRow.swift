@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FriendsListRow: View {
     
-    let item: FriendsListPresentationModel
+    let item: FriendsListRowViewModel
     
     var body: some View {
         NavigationLink(destination: FriendsModule.createFriendDetailView(friendId: item.friendId)) {

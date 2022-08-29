@@ -23,7 +23,7 @@ class FriendsServiceTest: XCTestCase {
 
     func testService_Success() {
         let expecatation = expectation(description: "Success")
-        mockNetworkManager.friends = MockFriendsData.friend
+        mockNetworkManager.friends = MockFriendsData.friends
         guard let friendsService = friendsService else { return }
         friendsService.makeNetworkRequest()
             .done { model in

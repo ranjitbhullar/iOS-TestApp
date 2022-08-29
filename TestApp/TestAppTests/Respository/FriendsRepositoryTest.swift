@@ -56,7 +56,7 @@ class FriendsRepositoryTest: XCTestCase {
 
     func testRepository_Success() {
         let expecatation = expectation(description: "Success")
-        mockDataStore.friends = MockFriendsData.friend
+        mockDataStore.friends = MockFriendsData.friends
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriends()
             .done { model in

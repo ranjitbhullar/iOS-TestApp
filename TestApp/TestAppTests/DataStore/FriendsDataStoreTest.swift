@@ -24,7 +24,7 @@ class FriendsDataStoreTest: XCTestCase {
 
     func testDataStore_WithService() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friend
+        mockService.friends = MockFriendsData.friends
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendsData()
             .done { model in
@@ -42,8 +42,8 @@ class FriendsDataStoreTest: XCTestCase {
     
     func testDataStore_WithCache() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friend
-        mockCacheManager.friends = MockFriendsData.friend
+        mockService.friends = MockFriendsData.friends
+        mockCacheManager.friends = MockFriendsData.friends
         
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendsData()
@@ -62,8 +62,8 @@ class FriendsDataStoreTest: XCTestCase {
     
     func testDataStore_WithFriendId() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friend
-        mockCacheManager.friends = MockFriendsData.friend
+        mockService.friends = MockFriendsData.friends
+        mockCacheManager.friends = MockFriendsData.friends
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendWith(friendId:"123")
             .done { model in

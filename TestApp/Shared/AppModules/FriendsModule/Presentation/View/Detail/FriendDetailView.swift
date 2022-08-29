@@ -18,7 +18,7 @@ struct FriendDetailView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: viewModel.friend?.avatarUrl ?? "")) { image in
+            AsyncImage(url: URL(string: viewModel.avatarUrl ?? "")) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -28,7 +28,7 @@ struct FriendDetailView: View {
             .frame(width: AppConstants.Constants.imageDetailSize, height: AppConstants.Constants.imageDetailSize)
             .cornerRadius(AppConstants.Constants.imageCornerRadius)
             
-            Text(viewModel.friend?.username ?? "")
+            Text(viewModel.username ?? "")
                 .font(.title)
                 .padding(.top)
             
@@ -42,7 +42,7 @@ struct FriendDetailView: View {
             Spacer()
         }
         .sheet(isPresented: $viewModel.validUrl) {
-            SafariView(url:URL(string: (viewModel.friend?.htmlUrl)!)!)
+            SafariView(url:URL(string: (viewModel.htmlUrl)!)!)
         }
     }
 }

@@ -14,7 +14,7 @@ class FriendDetailViewModelTest: XCTestCase  {
 
     var detailViewModel: FriendsDetailViewModel?
     var useCase = MockFriendDetailUseCase()
-    var friend = MockFriendDetailPresentationData.friend
+//    var friend = MockFriendDetailPresentationData.friend
     var expectation: XCTestExpectation!
     private var cancelables = Set<AnyCancellable>()
 
@@ -31,10 +31,11 @@ class FriendDetailViewModelTest: XCTestCase  {
         useCase.friend = MockFriendDetailDomainModel.friend
         detailViewModel?.fetchFriendDetails()
         detailViewModel!
-               .$friend
+               .$username
                .filter { ($0 != nil) }
                .sink { value in
-                   XCTAssertEqual(value?.friendId, "123")
+                   
+                   XCTAssertEqual(value, "Test User name")
                    self.expectation.fulfill()
 
                }
@@ -64,7 +65,7 @@ class FriendDetailViewModelTest: XCTestCase  {
     func testCheckSafariVCLoadTest_Success() {
 
         expectation = expectation(description: "This is failure case")
-        detailViewModel?.friend = MockFriendDetailPresentationData.friend
+        detailViewModel?.htmlUrl = "https://www.linkedin.com/in/joshuapeek30354/"
         detailViewModel?.validateUrl()
         
         detailViewModel!
@@ -83,8 +84,6 @@ class FriendDetailViewModelTest: XCTestCase  {
     func testCheckSafariVCLoadTest_Failure() {
 
         expectation = expectation(description: "This is failure case")
-        friend.htmlUrl = ""
-        detailViewModel?.friendId = "123"
         detailViewModel?.validateUrl()
         
         detailViewModel!

@@ -10,7 +10,9 @@ import Foundation
 final class FriendsDetailViewModel: ObservableObject, FriendsDetailViewModelProtocol {
     
     var friendId: String
-    @Published var friend: FriendDetailPresentationModel?
+    @Published var username: String?
+    @Published var avatarUrl: String?
+    @Published var htmlUrl: String?
     @Published var validUrl: Bool = false
     @Published var errorMessage: String? = nil
       
@@ -26,21 +28,23 @@ final class FriendsDetailViewModel: ObservableObject, FriendsDetailViewModelProt
     
     func fetchFriendDetails() {
         useCase.getFriendDetailWith(friendId: friendId)
-            .done(on: .main) { [weak self] model in
-                self?.getData(model: model)
+            .done(on: .main) { [weak self] domainModel in
+                self?.setData(friendDomainModel: domainModel)
             }
             .catch(on: .main, policy: .allErrors) {[weak self] error in
                 self?.errorMessage = error.localizedDescription
             }
     }
     
-    private func getData(model: FriendDetailDomainModel) {
+    private func setData(friendDomainModel: FriendDetailDomainModel) {
         
-        friend = FriendPresentationModelMapper(domainModel: model).mapToPresentationModel()
+        self.username = friendDomainModel.username
+        self.avatarUrl = friendDomainModel.avatarUrl
+        self.htmlUrl = friendDomainModel.htmlUrl
     }
     
     func validateUrl() {
-        let htmlURL = friend?.htmlUrl ?? ""
+        let htmlURL = self.htmlUrl ?? ""
         self.useCase.validateURL(for: htmlURL) { result in
             if result {
                 validUrl = true

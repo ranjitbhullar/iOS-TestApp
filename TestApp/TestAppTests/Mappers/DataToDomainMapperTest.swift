@@ -14,7 +14,7 @@ class DataToDomainMapperTest: XCTestCase  {
     var expectation: XCTestExpectation!
 
     override func setUpWithError() throws {
-        mapper = FriendsDataToDomainMapper(dataModel: MockFriendsData.friend ?? [])
+        mapper = FriendsDataToDomainMapper(dataModel: MockFriendsData.friends ?? [])
     }
 
     override func tearDownWithError() throws {

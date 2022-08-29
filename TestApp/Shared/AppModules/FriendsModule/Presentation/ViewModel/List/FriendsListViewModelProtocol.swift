@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FriendsListViewModelProtocol {
-    var friends: [FriendsListPresentationModel] { get }
+    var friends: [FriendsListRowViewModel] { get }
     var errorMessage: String? { get }
     func fetchFriends()
 }
