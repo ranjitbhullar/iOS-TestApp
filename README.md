@@ -1,6 +1,8 @@
 # iOS Sample App
-iOS Sample app using MVVM clean architecture.
-
+iOS Sample app using MVVM clean architecture. Integrated with
+* Unit Testing
+* Snapshot Testing
+* UI Testing
 
 # App Screenshots
 
@@ -16,6 +18,6 @@ iOS Sample app using MVVM clean architecture.
 ![App_Architecture](https://user-images.githubusercontent.com/106140731/187135775-4f04ee6c-abd3-4525-a1ac-24d179c13b0f.jpg)
 
 
-# Unit Test Code Coverage
+# Unit Test Code Coverage (96.2%)
 
-<img width="1307" alt="Screenshot 2022-08-29 at 11 55 27 AM" src="https://user-images.githubusercontent.com/106140731/187136535-bee750fb-3bd3-493f-95f1-bc0f35bb8e57.png">
+<img width="1291" alt="Screenshot 2022-08-29 at 3 35 43 PM" src="https://user-images.githubusercontent.com/106140731/187177604-30e1a4c3-73bc-42c7-9d3d-66e80ef34400.png">
