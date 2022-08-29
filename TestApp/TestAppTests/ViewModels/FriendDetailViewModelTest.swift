@@ -12,14 +12,14 @@ import Combine
 
 class FriendDetailViewModelTest: XCTestCase  {
 
-    var detailViewModel: FriendsDetailViewModel?
+    var detailViewModel: FriendDetailViewModel?
     var useCase = MockFriendDetailUseCase()
 //    var friend = MockFriendDetailPresentationData.friend
     var expectation: XCTestExpectation!
     private var cancelables = Set<AnyCancellable>()
 
     override func setUpWithError() throws {
-        detailViewModel = FriendsDetailViewModel(friendId: "123", useCase: useCase)
+        detailViewModel = FriendDetailViewModel(friendId: "123", useCase: useCase)
     }
 
     override func tearDownWithError() throws {

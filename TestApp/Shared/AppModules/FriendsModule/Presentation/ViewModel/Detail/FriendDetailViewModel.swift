@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FriendsDetailViewModel: ObservableObject, FriendsDetailViewModelProtocol {
+final class FriendDetailViewModel: ObservableObject, FriendsDetailViewModelProtocol {
     
     var friendId: String
     @Published var username: String?

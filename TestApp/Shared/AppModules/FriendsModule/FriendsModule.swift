@@ -46,8 +46,8 @@ extension FriendsModule {
     }
     
     ///use case injected to view model
-    static func createFriendDetailViewModel(friendId: String) -> FriendsDetailViewModel {
-        let viewModel = FriendsDetailViewModel(friendId: friendId, useCase: createFriendDetailUseCase())
+    static func createFriendDetailViewModel(friendId: String) -> FriendDetailViewModel {
+        let viewModel = FriendDetailViewModel(friendId: friendId, useCase: createFriendDetailUseCase())
         return viewModel
     }
 

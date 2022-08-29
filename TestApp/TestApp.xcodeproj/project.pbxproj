@@ -43,7 +43,7 @@
 		B725CE0E28AE8E88002B0743 /* FriendsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0C28AE8E88002B0743 /* FriendsListRow.swift */; };
 		B725CE0F28AE8E88002B0743 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE0D28AE8E88002B0743 /* FriendsListView.swift */; };
 		B725CE1228AE9077002B0743 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1128AE9077002B0743 /* FriendDetailView.swift */; };
-		B725CE1E28AEA444002B0743 /* FriendsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1C28AEA444002B0743 /* FriendsDetailViewModel.swift */; };
+		B725CE1E28AEA444002B0743 /* FriendDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1C28AEA444002B0743 /* FriendDetailViewModel.swift */; };
 		B725CE1F28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE1D28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift */; };
 		B725CE4E28AF7E08002B0743 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE4D28AF7E08002B0743 /* TestAppTests.swift */; };
 		B725CE5928AF7E88002B0743 /* CacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5828AF7E88002B0743 /* CacheManagerTest.swift */; };
@@ -76,6 +76,10 @@
 		B7434D2928B8F71500E6AAE4 /* FriendsListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */; };
 		B7434D2B28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */; };
 		B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */; };
+		B7434D3028BC959200E6AAE4 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7434D2F28BC959200E6AAE4 /* SnapshotTesting */; };
+		B7434D3528BC972B00E6AAE4 /* FriendsListSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */; };
+		B7434D3728BCA64000E6AAE4 /* MockFriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */; };
+		B7434D3928BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +151,7 @@
 		B725CE0C28AE8E88002B0743 /* FriendsListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRow.swift; sourceTree = "<group>"; };
 		B725CE0D28AE8E88002B0743 /* FriendsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		B725CE1128AE9077002B0743 /* FriendDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
-		B725CE1C28AEA444002B0743 /* FriendsDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewModel.swift; sourceTree = "<group>"; };
+		B725CE1C28AEA444002B0743 /* FriendDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewModel.swift; sourceTree = "<group>"; };
 		B725CE1D28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		B725CE4B28AF7E08002B0743 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B725CE4D28AF7E08002B0743 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
@@ -180,6 +184,9 @@
 		B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModel.swift; sourceTree = "<group>"; };
 		B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModelProtocol.swift; sourceTree = "<group>"; };
 		B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFriendDetailViewModel.swift; sourceTree = "<group>"; };
+		B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListSnapshotTest.swift; sourceTree = "<group>"; };
+		B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsListViewModel.swift; sourceTree = "<group>"; };
+		B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailtSnapshotTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B725CE6228AF7EDE002B0743 /* PromiseKit.framework in Frameworks */,
+				B7434D3028BC959200E6AAE4 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				B725CE1D28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift */,
-				B725CE1C28AEA444002B0743 /* FriendsDetailViewModel.swift */,
+				B725CE1C28AEA444002B0743 /* FriendDetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -511,6 +519,7 @@
 		B725CE4C28AF7E08002B0743 /* TestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				B7434D3328BC96FF00E6AAE4 /* Snapshot */,
 				B725CE5528AF7E2F002B0743 /* Mocks */,
 				B725CE8028AF831C002B0743 /* Usecases */,
 				B725CE7D28AF82DC002B0743 /* Respository */,
@@ -538,6 +547,7 @@
 		B725CE5528AF7E2F002B0743 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */,
 				B725CE8E28AF84C6002B0743 /* MockFriendDetailDomainData.swift */,
 				B725CE8A28AF848D002B0743 /* MockFriendDetailUseCase.swift */,
 				B725CE6928AF8238002B0743 /* MockFriendsDataStore.swift */,
@@ -637,6 +647,15 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		B7434D3328BC96FF00E6AAE4 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */,
+				B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */,
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -690,6 +709,9 @@
 				B725CE5028AF7E08002B0743 /* PBXTargetDependency */,
 			);
 			name = TestAppTests;
+			packageProductDependencies = (
+				B7434D2F28BC959200E6AAE4 /* SnapshotTesting */,
+			);
 			productName = TestAppTests;
 			productReference = B725CE4B28AF7E08002B0743 /* TestAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -726,6 +748,9 @@
 				Base,
 			);
 			mainGroup = B71A93C028AE62EE0005D408;
+			packageReferences = (
+				B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = B71A93CE28AE62F10005D408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -794,7 +819,7 @@
 				B7434D2928B8F71500E6AAE4 /* FriendsListRowViewModel.swift in Sources */,
 				B725CDE128AE89BB002B0743 /* FriendsDataStoreProtocol.swift in Sources */,
 				B71A93EE28AE62F10005D408 /* TestAppApp.swift in Sources */,
-				B725CE1E28AEA444002B0743 /* FriendsDetailViewModel.swift in Sources */,
+				B725CE1E28AEA444002B0743 /* FriendDetailViewModel.swift in Sources */,
 				B725CDE628AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift in Sources */,
 				B725CDCE28AE8818002B0743 /* FriendsDataModel.swift in Sources */,
 				B725CDD728AE888D002B0743 /* FriendsRepository.swift in Sources */,
@@ -827,8 +852,10 @@
 				B725CE4E28AF7E08002B0743 /* TestAppTests.swift in Sources */,
 				B725CE7528AF8238002B0743 /* MockFriendsDomainModel.swift in Sources */,
 				B725CE7028AF8238002B0743 /* MockFriendsDataStore.swift in Sources */,
+				B7434D3528BC972B00E6AAE4 /* FriendsListSnapshotTest.swift in Sources */,
 				B725CE6128AF7EBC002B0743 /* MockFriendsData.swift in Sources */,
 				B725CE6828AF8214002B0743 /* MockFriendDetailData.swift in Sources */,
+				B7434D3728BCA64000E6AAE4 /* MockFriendsListViewModel.swift in Sources */,
 				B725CE7F28AF82F8002B0743 /* FriendsRepositoryTest.swift in Sources */,
 				B725CE7C28AF82CE002B0743 /* FriendsDataStoreTest.swift in Sources */,
 				B725CE8428AF8352002B0743 /* FriendsListUseCaseTest.swift in Sources */,
@@ -845,6 +872,7 @@
 				B725CE5F28AF7EAD002B0743 /* MockURLProtocol.swift in Sources */,
 				B725CE9128AF850E002B0743 /* FriendDetailUseCaseTest.swift in Sources */,
 				B725CE7928AF828F002B0743 /* FriendsServiceTest.swift in Sources */,
+				B7434D3928BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift in Sources */,
 				B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1165,6 +1193,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7434D2F28BC959200E6AAE4 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B71A93C128AE62EE0005D408 /* Project object */;
 }

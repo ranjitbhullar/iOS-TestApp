@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FriendDetailView: View {
     
-    @ObservedObject var viewModel: FriendsDetailViewModel
+    @ObservedObject var viewModel: FriendDetailViewModel
     
-    init(viewModel: FriendsDetailViewModel) {
+    init(viewModel: FriendDetailViewModel) {
         self.viewModel = viewModel
         viewModel.fetchFriendDetails()
     }
