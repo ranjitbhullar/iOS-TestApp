@@ -23,41 +23,27 @@ class CacheManagerTest: XCTestCase {
     }
 
     func testCacheSetObject() {
-        expecatation = expectation(description: "Success")
+        
+        XCTAssertNil(cacheManager?.objectForKey(key: cacheKey))
         cacheManager?.setObjectForKey(object: NSString("Test Object"), key: cacheKey)
-        if let _ = cacheManager?.objectForKey(key: cacheKey) {
-            expecatation.fulfill()
-        }
-        wait(for: [expecatation], timeout: 1.0)
+        XCTAssertNotNil(cacheManager?.objectForKey(key: cacheKey))
     }
     
     func testCacheClearWithKey() {
-        expecatation = expectation(description: "Success")
+
         cacheManager?.setObjectForKey(object: NSString("Test Object"), key: cacheKey)
+        XCTAssertNotNil(cacheManager?.objectForKey(key: cacheKey))
+        
         cacheManager?.clearCacheForKey(key: cacheKey)
-        if let _ = cacheManager?.objectForKey(key: cacheKey) {
-            
-            XCTFail("Cache should not return in this case.")
-        }
-        else {
-            expecatation.fulfill()
-        }
-            
-        wait(for: [expecatation], timeout: 1.0)
+        XCTAssertNil(cacheManager?.objectForKey(key: cacheKey))
     }
     
     func testCacheClearAllCache() {
-        expecatation = expectation(description: "Success")
+        
         cacheManager?.setObjectForKey(object: NSString("Test Object"), key: cacheKey)
+        XCTAssertNotNil(cacheManager?.objectForKey(key: cacheKey))
+        
         cacheManager?.clearAllCache()
-        if let _ = cacheManager?.objectForKey(key: cacheKey) {
-            
-            XCTFail("Cache should not return in this case.")
-        }
-        else {
-            expecatation.fulfill()
-        }
-            
-        wait(for: [expecatation], timeout: 1.0)
+        XCTAssertNil(cacheManager?.objectForKey(key: cacheKey))
     }
 }
