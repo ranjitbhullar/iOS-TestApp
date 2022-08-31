@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FriendsListUseCase: FriendsListUseCaseProtocol {
+struct FriendsListUseCase: FriendsListUseCaseProtocol {
 
     private let repository: FriendsRepositoryProtocol
 

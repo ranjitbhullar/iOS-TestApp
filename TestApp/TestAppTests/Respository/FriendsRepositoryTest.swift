@@ -11,31 +11,29 @@ import XCTest
 class FriendsRepositoryTest: XCTestCase {
 
     var friendsRepository: FriendsRepository?
-    let mockDataStore = MockFriendsDataStore()
+    var mockDataStore: MockFriendsDataStore?
 
     override func setUpWithError() throws {
-        friendsRepository = FriendsRepository(dataStore: mockDataStore)
     }
     
-    override func tearDownWithError() throws {
-        friendsRepository = nil
+     override func tearDownWithError() throws {
     }
     
     func testRepositoryWithFriendDetails_Success() {
         let expecatation = expectation(description: "Success")
-        mockDataStore.friend = MockFriendDetailData.friend
+        
+        mockDataStore = MockFriendsDataStore(friend: MockFriendDetailData.friend)
+        friendsRepository = FriendsRepository(dataStore: mockDataStore!)
+ 
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriendWith(friendId: "123")
-            .done { model in
-                if !model.friendId.isEmpty {
-                    expecatation.fulfill()
-                }
-                else {
-                    XCTFail("Failure not expected in this case")
-                }
+            .done { friend in
+                XCTAssertEqual(friend.friendId, "123")
+                XCTAssertEqual(friend.username, "Test User")
+                expecatation.fulfill()
             }
             .catch { _ in
-                expecatation.fulfill()
+                XCTFail("Failed to fetch friend details")
             }
 
         wait(for: [expecatation], timeout: 1.0)
@@ -43,7 +41,10 @@ class FriendsRepositoryTest: XCTestCase {
     
     func testRepositoryWithFriendDetail_Failure() {
         let expecatation = expectation(description: "Failure")
-        mockDataStore.error = NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage])
+        
+        mockDataStore = MockFriendsDataStore(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
+        friendsRepository = FriendsRepository(dataStore: mockDataStore!)
+
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriendWith(friendId: "123")
             .catch {error in
@@ -54,27 +55,31 @@ class FriendsRepositoryTest: XCTestCase {
         wait(for: [expecatation], timeout: 1.0)
     }
 
-    func testRepository_Success() {
+    func testRepositoryFriendsList_Success() {
         let expecatation = expectation(description: "Success")
-        mockDataStore.friends = MockFriendsData.friends
+        
+        mockDataStore = MockFriendsDataStore(friends: MockFriendsData.friends)
+        friendsRepository = FriendsRepository(dataStore: mockDataStore!)
+       
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriends()
-            .done { model in
-                let friendsCount = model.count
-                if friendsCount >= 1 {
-                    expecatation.fulfill()
-                }
+            .done { friends in
+                XCTAssertGreaterThanOrEqual(friends.count, 1)
+                expecatation.fulfill()
             }
             .catch { _ in
-                expecatation.fulfill()
+                XCTFail("Failed to get friends data")
             }
 
         wait(for: [expecatation], timeout: 1.0)
     }
 
-    func testRepository_Failure() {
+    func testRepositoryFriendsList_Failure() {
         let expecatation = expectation(description: "Failure")
-        mockDataStore.error = NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage])
+        
+        mockDataStore = MockFriendsDataStore(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
+        friendsRepository = FriendsRepository(dataStore: mockDataStore!)
+        
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriends()
             .catch {error in

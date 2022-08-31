@@ -24,12 +24,8 @@ class FriendsModuleTest: XCTestCase {
     func testCreateFriendDetailViewModelCreation() {
         expectation = expectation(description: "Success case")
         let detailViewModel = FriendsModule.createFriendDetailViewModel(friendId: "123")
-        if (detailViewModel.friendId == "123") {
-            expectation.fulfill()
-        }
-        else {
-            XCTFail("Failed to create object")
-        }
+        XCTAssertEqual(detailViewModel.friendId, "123")
+        expectation.fulfill()
         wait(for: [expectation], timeout: 1.0)
     }
    

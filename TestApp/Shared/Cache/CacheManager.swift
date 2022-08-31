@@ -9,7 +9,7 @@ import Foundation
 
 let dataCache = NSCache<NSString, AnyObject>()
 
-class CacheManager: CacheManagerProtocol {
+struct CacheManager: CacheManagerProtocol {
     
     func objectForKey(key: String) -> AnyObject? {
         

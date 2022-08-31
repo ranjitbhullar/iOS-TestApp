@@ -9,8 +9,7 @@ import Foundation
 import PromiseKit
 @testable import TestApp
 
-class MockFriendsRepository: FriendsRepositoryProtocol {
-    
+struct MockFriendsRepository: FriendsRepositoryProtocol {
     
     var friends: [FriendsListDomainModel]?
     var friend: FriendDetailDomainModel?

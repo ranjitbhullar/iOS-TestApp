@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FriendsDetailUseCase: FriendsDetailUseCaseProtocol {    
+struct FriendsDetailUseCase: FriendsDetailUseCaseProtocol {    
     
     private let repository: FriendsRepositoryProtocol
 

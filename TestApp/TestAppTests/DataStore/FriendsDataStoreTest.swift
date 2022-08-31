@@ -11,30 +11,30 @@ import XCTest
 class FriendsDataStoreTest: XCTestCase {
 
     var friendsDataStore: FriendsDataStore?
-    let mockService = MockFriendsService()
-    let mockCacheManager = MockCacheManager()
+    var mockService: MockFriendsService?
+    var mockCacheManager: MockCacheManager?
+    let friends = MockFriendsData.friends
 
     override func setUpWithError() throws {
-        friendsDataStore = FriendsDataStore(service: mockService, cacheManager: mockCacheManager)
     }
     
     override func tearDownWithError() throws {
-        friendsDataStore = nil
     }
 
     func testDataStore_WithService() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friends
+        mockService = MockFriendsService(friends: friends)
+        mockCacheManager = MockCacheManager()
+        friendsDataStore = FriendsDataStore(service: mockService!, cacheManager: mockCacheManager!)
+
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendsData()
-            .done { model in
-                let friendsCount = model.count
-                if friendsCount >= 1 {
-                    expecatation.fulfill()
-                }
+            .done { friends in
+                XCTAssertGreaterThanOrEqual(friends.count, 1)
+                expecatation.fulfill()
             }
             .catch { _ in
-                expecatation.fulfill()
+                XCTFail("Failed to fetch friends data from network")
             }
 
         wait(for: [expecatation], timeout: 1.0)
@@ -42,19 +42,18 @@ class FriendsDataStoreTest: XCTestCase {
     
     func testDataStore_WithCache() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friends
-        mockCacheManager.friends = MockFriendsData.friends
+        mockService = MockFriendsService(friends: friends)
+        mockCacheManager = MockCacheManager(friends: friends)
+        friendsDataStore = FriendsDataStore(service: mockService!, cacheManager: mockCacheManager!)
         
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendsData()
-            .done { model in
-                let friendsCount = model.count
-                if friendsCount >= 1 {
-                    expecatation.fulfill()
-                }
+            .done { friends in
+                XCTAssertGreaterThanOrEqual(friends.count, 1)
+                expecatation.fulfill()
             }
             .catch { _ in
-                expecatation.fulfill()
+                XCTFail("Failed to fetch friends data from cache")
             }
 
         wait(for: [expecatation], timeout: 1.0)
@@ -62,15 +61,20 @@ class FriendsDataStoreTest: XCTestCase {
     
     func testDataStore_WithFriendId() {
         let expecatation = expectation(description: "Success")
-        mockService.friends = MockFriendsData.friends
-        mockCacheManager.friends = MockFriendsData.friends
+        
+        mockService = MockFriendsService(friends: MockFriendsData.friends)
+        mockCacheManager = MockCacheManager(friends: MockFriendsData.friends)
+        friendsDataStore = FriendsDataStore(service: mockService!, cacheManager: mockCacheManager!)
+        
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendWith(friendId:"123")
-            .done { model in
+            .done { friend in
+                XCTAssertEqual(friend.id, 123)
+                XCTAssertEqual(friend.username, "Test User name")
                expecatation.fulfill()
             }
             .catch { _ in
-                expecatation.fulfill()
+                XCTFail("Failed to fetch friend details")
             }
 
         wait(for: [expecatation], timeout: 1.0)
@@ -78,11 +82,15 @@ class FriendsDataStoreTest: XCTestCase {
     
     func testDataStoreWithFriendId_Failure() {
         let expecatation = expectation(description: "Failure")
-        mockService.error = NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage])
+        
+        mockService = MockFriendsService(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
+        mockCacheManager = MockCacheManager()
+        friendsDataStore = FriendsDataStore(service: mockService!, cacheManager: mockCacheManager!)
+        
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendWith(friendId: "123")
             .catch {error in
-                XCTAssertTrue(error.localizedDescription ==   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage)
+                XCTAssertEqual(error.localizedDescription,  AppConstants.ErrorConstants.kRepositoryFailedErrorMessage)
                 expecatation.fulfill()
             }
 

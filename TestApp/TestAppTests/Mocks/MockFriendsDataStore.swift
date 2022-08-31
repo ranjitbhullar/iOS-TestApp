@@ -10,7 +10,7 @@ import PromiseKit
 
 @testable import TestApp
 
-class MockFriendsDataStore: FriendsDataStoreProtocol {
+struct MockFriendsDataStore: FriendsDataStoreProtocol {
 
     var friends: [FriendDataModel]?
     var friend: FriendDataModel?

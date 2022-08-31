@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FriendsDataToDomainMapper: FriendsDataToDomainMapperProtocol {
+struct FriendsDataToDomainMapper: FriendsDataToDomainMapperProtocol {
     
     private var friendsDataModel: [FriendDataModel]
 

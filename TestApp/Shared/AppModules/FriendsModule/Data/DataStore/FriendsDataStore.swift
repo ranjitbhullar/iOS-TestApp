@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-class FriendsDataStore: FriendsDataStoreProtocol {
+struct FriendsDataStore: FriendsDataStoreProtocol {
     private let service: FriendsServiceProtocol
     private let cacheManager: CacheManagerProtocol
     init(service: FriendsServiceProtocol, cacheManager: CacheManagerProtocol) {

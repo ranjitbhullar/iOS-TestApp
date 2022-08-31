@@ -10,7 +10,7 @@ import PromiseKit
 
 @testable import TestApp
 
-class MockFriendDetailUseCase: FriendsDetailUseCaseProtocol {
+struct MockFriendDetailUseCase: FriendsDetailUseCaseProtocol {
     
     var friend: FriendDetailDomainModel?
     var error: Error?

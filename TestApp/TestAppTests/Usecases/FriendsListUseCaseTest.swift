@@ -9,45 +9,47 @@ import XCTest
 @testable import TestApp
 
 class FriendsListUseCaseTest: XCTestCase {
-
+    
+    var expectation: XCTestExpectation!
     var useCase: FriendsListUseCase?
-    let repository = MockFriendsRepository()
-
+    var repository: MockFriendsRepository?
+    
     override func setUpWithError() throws {
-        useCase = FriendsListUseCase(repository: repository)
+        
     }
     
     override func tearDownWithError() throws {
-        useCase = nil
+        
     }
 
     func testUseCase_Success() {
-        let expecatation = expectation(description: "Success")
-
-        repository.friends = MockFriendsDomainModel.friends
-        guard let useCase = useCase else { return }
-        useCase.getFriends()
-            .done { model in
-                let friendsCount = model.count
-                if friendsCount >= 1 {
-                    expecatation.fulfill()
-                }
+        expectation = expectation(description: "Success")
+        repository = MockFriendsRepository(friends: MockFriendsDomainModel.friends)
+        useCase = FriendsListUseCase(repository: repository!)
+        
+        useCase?.getFriends()
+            .done { friends in
+                XCTAssertGreaterThanOrEqual(friends.count, 1)
+                self.expectation.fulfill()
             }
-            .catch { _ in }
+            .catch { _ in
+                XCTFail("Failed to get friends")
+            }
 
-        wait(for: [expecatation], timeout: 1.0)
+        wait(for: [expectation], timeout: 1.0)
     }
 
     func testUseCase_Failure() {
-        let expecatation = expectation(description: "Failure")
-        repository.error = NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kUseCaseFailedErrorMessage])
-        guard let useCase = useCase else { return }
-        useCase.getFriends()
+        expectation = expectation(description: "Failure")
+        
+        repository = MockFriendsRepository(error: NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kUseCaseFailedErrorMessage]))
+        useCase = FriendsListUseCase(repository: repository!)
+        useCase?.getFriends()
             .catch { error in
                 XCTAssertTrue(error.localizedDescription ==   AppConstants.ErrorConstants.kUseCaseFailedErrorMessage)
-                expecatation.fulfill()
+                self.expectation.fulfill()
             }
 
-        wait(for: [expecatation], timeout: 1.0)
+        wait(for: [expectation], timeout: 1.0)
     }
 }

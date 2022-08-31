@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 // Network manager
-class NetworkManger: NetworkManagerProtocol {
+struct NetworkManger: NetworkManagerProtocol {
 
     private let session: URLSession
 

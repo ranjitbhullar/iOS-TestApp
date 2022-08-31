@@ -10,21 +10,13 @@ import PromiseKit
 
 @testable import TestApp
 
-class MockCacheManager: CacheManagerProtocol {
+struct MockCacheManager: CacheManagerProtocol {
     
     var friends: [FriendDataModel]?
     
-    func setObjectForKey(object: AnyObject, key: String) {
-        
-    }
-    
-    func clearCacheForKey(key: String) {
-        
-    }
-    
-    func clearAllCache() {
-        
-    }
+    func setObjectForKey(object: AnyObject, key: String) { }
+    func clearCacheForKey(key: String) { }
+    func clearAllCache() {    }
     
     func objectForKey(key: String) -> AnyObject? {
         

@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-class FriendsRepository: FriendsRepositoryProtocol {
+struct FriendsRepository: FriendsRepositoryProtocol {
     
     private let dataStore: FriendsDataStoreProtocol
     init(dataStore: FriendsDataStoreProtocol) {

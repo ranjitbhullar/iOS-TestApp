@@ -15,8 +15,6 @@
 		B725CDAA28AE84DE002B0743 /* FriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDA928AE84DE002B0743 /* FriendsUITests.swift */; };
 		B725CDB728AE8658002B0743 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDB528AE8658002B0743 /* NetworkManger.swift */; };
 		B725CDB828AE8658002B0743 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDB628AE8658002B0743 /* NetworkManagerProtocol.swift */; };
-		B725CDBB28AE869D002B0743 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B725CDBA28AE869D002B0743 /* PromiseKit.framework */; };
-		B725CDBC28AE869D002B0743 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B725CDBA28AE869D002B0743 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B725CDC028AE86F4002B0743 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDBE28AE86F4002B0743 /* CacheManager.swift */; };
 		B725CDC128AE86F4002B0743 /* CacheManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDBF28AE86F4002B0743 /* CacheManagerProtocol.swift */; };
 		B725CDC528AE873D002B0743 /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDC328AE873D002B0743 /* FriendsService.swift */; };
@@ -50,7 +48,6 @@
 		B725CE5E28AF7EAD002B0743 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5C28AF7EAD002B0743 /* NetworkManagerTest.swift */; };
 		B725CE5F28AF7EAD002B0743 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE5D28AF7EAD002B0743 /* MockURLProtocol.swift */; };
 		B725CE6128AF7EBC002B0743 /* MockFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6028AF7EBC002B0743 /* MockFriendsData.swift */; };
-		B725CE6228AF7EDE002B0743 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B725CDBA28AE869D002B0743 /* PromiseKit.framework */; };
 		B725CE6428AF81EA002B0743 /* MockCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6328AF81EA002B0743 /* MockCacheManager.swift */; };
 		B725CE6728AF8214002B0743 /* MockFriendDetailDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6528AF8214002B0743 /* MockFriendDetailDomainModel.swift */; };
 		B725CE6828AF8214002B0743 /* MockFriendDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CE6628AF8214002B0743 /* MockFriendDetailData.swift */; };
@@ -75,11 +72,11 @@
 		B725CEE528B3450A002B0743 /* FriendsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */; };
 		B7434D2928B8F71500E6AAE4 /* FriendsListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */; };
 		B7434D2B28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */; };
-		B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */; };
 		B7434D3028BC959200E6AAE4 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7434D2F28BC959200E6AAE4 /* SnapshotTesting */; };
 		B7434D3528BC972B00E6AAE4 /* FriendsListSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */; };
-		B7434D3728BCA64000E6AAE4 /* MockFriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */; };
 		B7434D3928BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */; };
+		B7B1883D28BF356C00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883C28BF356C00D8081D /* PromiseKit */; };
+		B7B1883F28BF361E00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883E28BF361E00D8081D /* PromiseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,20 +95,6 @@
 			remoteInfo = "TestApp (iOS)";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B725CDBD28AE869D002B0743 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B725CDBC28AE869D002B0743 /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B71A93C628AE62EF0005D408 /* TestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppApp.swift; sourceTree = "<group>"; };
@@ -183,9 +166,7 @@
 		B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B7434D2828B8F71500E6AAE4 /* FriendsListRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModel.swift; sourceTree = "<group>"; };
 		B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModelProtocol.swift; sourceTree = "<group>"; };
-		B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFriendDetailViewModel.swift; sourceTree = "<group>"; };
 		B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListSnapshotTest.swift; sourceTree = "<group>"; };
-		B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendsListViewModel.swift; sourceTree = "<group>"; };
 		B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailtSnapshotTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B725CDBB28AE869D002B0743 /* PromiseKit.framework in Frameworks */,
+				B7B1883D28BF356C00D8081D /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +190,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B725CE6228AF7EDE002B0743 /* PromiseKit.framework in Frameworks */,
 				B7434D3028BC959200E6AAE4 /* SnapshotTesting in Frameworks */,
+				B7B1883F28BF361E00D8081D /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +528,6 @@
 		B725CE5528AF7E2F002B0743 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				B7434D3628BCA64000E6AAE4 /* MockFriendsListViewModel.swift */,
 				B725CE8E28AF84C6002B0743 /* MockFriendDetailDomainData.swift */,
 				B725CE8A28AF848D002B0743 /* MockFriendDetailUseCase.swift */,
 				B725CE6928AF8238002B0743 /* MockFriendsDataStore.swift */,
@@ -560,7 +540,6 @@
 				B725CE6528AF8214002B0743 /* MockFriendDetailDomainModel.swift */,
 				B725CE6328AF81EA002B0743 /* MockCacheManager.swift */,
 				B725CE6028AF7EBC002B0743 /* MockFriendsData.swift */,
-				B7434D2C28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -666,13 +645,15 @@
 				B71A93C928AE62F10005D408 /* Sources */,
 				B71A93CA28AE62F10005D408 /* Frameworks */,
 				B71A93CB28AE62F10005D408 /* Resources */,
-				B725CDBD28AE869D002B0743 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "TestApp (iOS)";
+			packageProductDependencies = (
+				B7B1883C28BF356C00D8081D /* PromiseKit */,
+			);
 			productName = "TestApp (iOS)";
 			productReference = B71A93CD28AE62F10005D408 /* TestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -711,6 +692,7 @@
 			name = TestAppTests;
 			packageProductDependencies = (
 				B7434D2F28BC959200E6AAE4 /* SnapshotTesting */,
+				B7B1883E28BF361E00D8081D /* PromiseKit */,
 			);
 			productName = TestAppTests;
 			productReference = B725CE4B28AF7E08002B0743 /* TestAppTests.xctest */;
@@ -750,6 +732,7 @@
 			mainGroup = B71A93C028AE62EE0005D408;
 			packageReferences = (
 				B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = B71A93CE28AE62F10005D408 /* Products */;
 			projectDirPath = "";
@@ -855,7 +838,6 @@
 				B7434D3528BC972B00E6AAE4 /* FriendsListSnapshotTest.swift in Sources */,
 				B725CE6128AF7EBC002B0743 /* MockFriendsData.swift in Sources */,
 				B725CE6828AF8214002B0743 /* MockFriendDetailData.swift in Sources */,
-				B7434D3728BCA64000E6AAE4 /* MockFriendsListViewModel.swift in Sources */,
 				B725CE7F28AF82F8002B0743 /* FriendsRepositoryTest.swift in Sources */,
 				B725CE7C28AF82CE002B0743 /* FriendsDataStoreTest.swift in Sources */,
 				B725CE8428AF8352002B0743 /* FriendsListUseCaseTest.swift in Sources */,
@@ -873,7 +855,6 @@
 				B725CE9128AF850E002B0743 /* FriendDetailUseCaseTest.swift in Sources */,
 				B725CE7928AF828F002B0743 /* FriendsServiceTest.swift in Sources */,
 				B7434D3928BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift in Sources */,
-				B7434D2D28B910EC00E6AAE4 /* MockFriendDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,6 +1184,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1210,6 +1199,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		B7B1883C28BF356C00D8081D /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		B7B1883E28BF361E00D8081D /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

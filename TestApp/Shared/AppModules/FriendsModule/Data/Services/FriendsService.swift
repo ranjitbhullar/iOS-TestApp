@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 /// Makes network call after preparing url
-class FriendsService: FriendsServiceProtocol {
+struct FriendsService: FriendsServiceProtocol {
 
     private let network: NetworkManagerProtocol
 

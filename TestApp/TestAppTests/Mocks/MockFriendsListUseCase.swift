@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 @testable import TestApp
 
-class MockFriendsListUseCase: FriendsListUseCaseProtocol {
+struct MockFriendsListUseCase: FriendsListUseCaseProtocol {
 
     var friend: [FriendsListDomainModel]?
     var error: Error?

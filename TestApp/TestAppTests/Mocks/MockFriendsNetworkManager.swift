@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 @testable import TestApp
 
-class MockFriendsNetworkManager: NetworkManagerProtocol {
+struct MockFriendsNetworkManager: NetworkManagerProtocol {
 
     var friends: [FriendDataModel]?
     var error: Error?

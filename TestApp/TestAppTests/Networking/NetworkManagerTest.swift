@@ -41,12 +41,9 @@ class NetworkManagerTest: XCTestCase {
         guard let testUrl = testUrl,
               let networkManager = networkManager else { return }
         networkManager.request([FriendDataModel].self, endPoint: testUrl)
-            .done { model in
-                let friendCount = model.count
-                if friendCount >= 1 {
-                    XCTAssertTrue(model.first?.username == "Test User name")
-                    expecatation.fulfill()
-                }
+            .done { friends in
+                XCTAssertGreaterThanOrEqual(friends.count, 1)
+                expecatation.fulfill()
             }.catch { error in
                 XCTFail("Error was not expected in this case: \(error)")
             }
@@ -73,6 +70,9 @@ class NetworkManagerTest: XCTestCase {
             .done { model in
                 XCTFail("Success response was not expected in this case.")
             }.catch { error in
+                XCTAssertEqual(error.localizedDescription,
+                "The data couldn’t be read because it isn’t in the correct format.")
+                
                 expectation.fulfill()
             }
 
