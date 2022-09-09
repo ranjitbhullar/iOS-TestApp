@@ -13,7 +13,7 @@ struct FriendDetailView: View {
     
     init(viewModel: FriendDetailViewModel) {
         self.viewModel = viewModel
-        viewModel.fetchFriendDetails()
+        
     }
     
     var body: some View {
@@ -43,6 +43,9 @@ struct FriendDetailView: View {
         }
         .sheet(isPresented: $viewModel.validUrl) {
             SafariView(url:URL(string: (viewModel.htmlUrl)!)!)
+        }
+        .onAppear() {
+            viewModel.fetchFriendDetails()
         }
     }
 }
