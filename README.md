@@ -24,7 +24,7 @@ iOS Sample app using MVVM clean architecture. Integrated with
 
 # NOTE
 
-Please follow below instructions if you get any build issue after code checkout.
+Please follow below instructions if you get any build issues after the code checkout.
 
 **Go to menu:** <br />
 File -> Packages -> Reset Package Caches
