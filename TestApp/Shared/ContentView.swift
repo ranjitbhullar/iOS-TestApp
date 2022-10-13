@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import Swinject
 
 struct ContentView: View {
+    
+    public init() {
+        FriendsModule.registerDependencies()
+    }
+    
     var body: some View {
         NavigationView{
-            FriendsModule.createFriendListView()
+            initializeView()
         }
+    }
+    
+    func initializeView() -> FriendsListView {
+        return (Dependency.container?.resolve(FriendsListView.self))!
     }
 }

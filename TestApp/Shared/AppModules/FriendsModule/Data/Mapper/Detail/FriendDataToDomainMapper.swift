@@ -9,19 +9,13 @@ import Foundation
 
 class FriendDataToDomainMapper: FriendDataToDomainMapperProtocol {
     
-    private var friendDataModel: FriendDataModel
-
-    init(dataModel: FriendDataModel) {
-        self.friendDataModel = dataModel
-    }
-    
-    func dataToDomainMapper() -> FriendDetailDomainModel {
+    func transform(data: FriendDataModel) -> FriendDetailDomainModel {
        
-        var friendDomainModel = FriendDetailDomainModel(friendId: String(friendDataModel.id),
-                                                        nickname: friendDataModel.login,
-                                                        username: friendDataModel.username)
-        friendDomainModel.avatarUrl = friendDataModel.avatarUrl
-        friendDomainModel.htmlUrl = friendDataModel.htmlUrl
+        var friendDomainModel = FriendDetailDomainModel(friendId: String(data.id),
+                                                        nickname: data.login,
+                                                        username: data.username)
+        friendDomainModel.avatarUrl = data.avatarUrl
+        friendDomainModel.htmlUrl = data.htmlUrl
             
         return friendDomainModel
     }

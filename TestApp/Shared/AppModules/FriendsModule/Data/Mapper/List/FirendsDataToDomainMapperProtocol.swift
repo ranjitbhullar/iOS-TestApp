@@ -10,5 +10,5 @@ import PromiseKit
 
 protocol FriendsDataToDomainMapperProtocol {
     
-    func dataToDomainMapper() -> [FriendsListDomainModel]
+    func transform(data: [FriendDataModel]) -> [FriendsListDomainModel]
 }

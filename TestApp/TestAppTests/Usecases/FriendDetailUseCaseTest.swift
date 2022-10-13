@@ -26,7 +26,7 @@ class FriendDetailUseCaseTest: XCTestCase  {
     func testUsecase_FriendDetails() {
         expectation = expectation(description: "Success case")
         
-        let repository = MockFriendsRepository(friend: friend)
+        let repository = MockFriendDetailRepository(friend: friend)
         useCase = FriendsDetailUseCase(repository: repository)
         
         useCase?.getFriendDetailWith(friendId: friend!.friendId)
@@ -43,7 +43,7 @@ class FriendDetailUseCaseTest: XCTestCase  {
     
     func testDetailUsecase_Success() {
         expectation = expectation(description: "Success case")
-        useCase = FriendsDetailUseCase(repository: MockFriendsRepository())
+        useCase = FriendsDetailUseCase(repository: MockFriendDetailRepository())
         
         useCase?.validateURL(for: friend?.htmlUrl ?? "") { result in
             XCTAssertEqual(result, true)
@@ -54,7 +54,7 @@ class FriendDetailUseCaseTest: XCTestCase  {
 
     func testDetailUsecase_Failure() {
         expectation = expectation(description: "This is failure case")
-        useCase = FriendsDetailUseCase(repository: MockFriendsRepository())
+        useCase = FriendsDetailUseCase(repository: MockFriendDetailRepository())
         useCase?.validateURL(for: "") { result in
             XCTAssertEqual(result, false)
             expectation.fulfill()

@@ -9,9 +9,9 @@ import Foundation
 
 struct FriendsDetailUseCase: FriendsDetailUseCaseProtocol {    
     
-    private let repository: FriendsRepositoryProtocol
+    private let repository: FriendDetailRepositoryProtocol
 
-    init(repository: FriendsRepositoryProtocol) {
+    init(repository: FriendDetailRepositoryProtocol) {
         self.repository = repository
     }
     

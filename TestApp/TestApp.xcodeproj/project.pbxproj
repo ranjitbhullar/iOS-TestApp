@@ -75,6 +75,12 @@
 		B7434D3028BC959200E6AAE4 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7434D2F28BC959200E6AAE4 /* SnapshotTesting */; };
 		B7434D3528BC972B00E6AAE4 /* FriendsListSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */; };
 		B7434D3928BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */; };
+		B774827C28F86C2C0067E98D /* FriendDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774827B28F86C2C0067E98D /* FriendDetailRepository.swift */; };
+		B774828128F86D480067E98D /* FriendDetailRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828028F86D480067E98D /* FriendDetailRepositoryProtocol.swift */; };
+		B774828328F86EEC0067E98D /* FriendDetailRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828228F86EEC0067E98D /* FriendDetailRepositoryTest.swift */; };
+		B774828528F86FE20067E98D /* MockFriendDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828428F86FE20067E98D /* MockFriendDetailRepository.swift */; };
+		B774828828F872150067E98D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B774828728F872150067E98D /* Swinject */; };
+		B774828B28F8727B0067E98D /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828A28F8727B0067E98D /* Dependency.swift */; };
 		B7B1883D28BF356C00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883C28BF356C00D8081D /* PromiseKit */; };
 		B7B1883F28BF361E00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883E28BF361E00D8081D /* PromiseKit */; };
 /* End PBXBuildFile section */
@@ -168,6 +174,11 @@
 		B7434D2A28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListRowViewModelProtocol.swift; sourceTree = "<group>"; };
 		B7434D3428BC972B00E6AAE4 /* FriendsListSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListSnapshotTest.swift; sourceTree = "<group>"; };
 		B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailtSnapshotTest.swift; sourceTree = "<group>"; };
+		B774827B28F86C2C0067E98D /* FriendDetailRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailRepository.swift; sourceTree = "<group>"; };
+		B774828028F86D480067E98D /* FriendDetailRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B774828228F86EEC0067E98D /* FriendDetailRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailRepositoryTest.swift; sourceTree = "<group>"; };
+		B774828428F86FE20067E98D /* MockFriendDetailRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendDetailRepository.swift; sourceTree = "<group>"; };
+		B774828A28F8727B0067E98D /* Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B1883D28BF356C00D8081D /* PromiseKit in Frameworks */,
+				B774828828F872150067E98D /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +231,7 @@
 				B725CDC928AE879F002B0743 /* Constants */,
 				B725CDB128AE8623002B0743 /* Networking */,
 				B725CDB228AE8629002B0743 /* Cache */,
+				B774828928F872670067E98D /* Dependency */,
 				B71A93C828AE62F10005D408 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -357,7 +370,8 @@
 		B725CDD028AE883A002B0743 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
-				B725CDD528AE888D002B0743 /* FriendsRepository.swift */,
+				B774827D28F86D0B0067E98D /* List */,
+				B774827A28F86C110067E98D /* Detail */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -534,6 +548,7 @@
 				B725CE6E28AF8238002B0743 /* MockFriendsDomainModel.swift */,
 				B725CE6B28AF8238002B0743 /* MockFriendsNetworkManager.swift */,
 				B725CE6A28AF8238002B0743 /* MockFriendsRepository.swift */,
+				B774828428F86FE20067E98D /* MockFriendDetailRepository.swift */,
 				B725CE6F28AF8238002B0743 /* MockFriendsService.swift */,
 				B725CE6D28AF8238002B0743 /* MockFriendsListUseCase.swift */,
 				B725CE6628AF8214002B0743 /* MockFriendDetailData.swift */,
@@ -572,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				B725CE7E28AF82F8002B0743 /* FriendsRepositoryTest.swift */,
+				B774828228F86EEC0067E98D /* FriendDetailRepositoryTest.swift */,
 			);
 			path = Respository;
 			sourceTree = "<group>";
@@ -621,7 +637,8 @@
 		B725CEE228B344D5002B0743 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */,
+				B774827F28F86D2F0067E98D /* Detail */,
+				B774827E28F86D210067E98D /* List */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -633,6 +650,46 @@
 				B7434D3828BCC0D400E6AAE4 /* FriendDetailtSnapshotTest.swift */,
 			);
 			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		B774827A28F86C110067E98D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B774827B28F86C2C0067E98D /* FriendDetailRepository.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B774827D28F86D0B0067E98D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B725CDD528AE888D002B0743 /* FriendsRepository.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B774827E28F86D210067E98D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B725CEE328B34505002B0743 /* FriendsRepositoryProtocol.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B774827F28F86D2F0067E98D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B774828028F86D480067E98D /* FriendDetailRepositoryProtocol.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B774828928F872670067E98D /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				B774828A28F8727B0067E98D /* Dependency.swift */,
+			);
+			path = Dependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,6 +710,7 @@
 			name = "TestApp (iOS)";
 			packageProductDependencies = (
 				B7B1883C28BF356C00D8081D /* PromiseKit */,
+				B774828728F872150067E98D /* Swinject */,
 			);
 			productName = "TestApp (iOS)";
 			productReference = B71A93CD28AE62F10005D408 /* TestApp.app */;
@@ -733,6 +791,7 @@
 			packageReferences = (
 				B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				B774828628F872150067E98D /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = B71A93CE28AE62F10005D408 /* Products */;
 			projectDirPath = "";
@@ -778,6 +837,7 @@
 			files = (
 				B725CDC128AE86F4002B0743 /* CacheManagerProtocol.swift in Sources */,
 				B725CDB828AE8658002B0743 /* NetworkManagerProtocol.swift in Sources */,
+				B774828B28F8727B0067E98D /* Dependency.swift in Sources */,
 				B725CE1F28AEA444002B0743 /* FriendsDetailViewModelProtocol.swift in Sources */,
 				B725CDE228AE89BB002B0743 /* FriendsDataStore.swift in Sources */,
 				B725CDF628AE8A7F002B0743 /* FriendsDetailUseCase.swift in Sources */,
@@ -796,6 +856,7 @@
 				B725CDE528AE89E7002B0743 /* FirendsDataToDomainMapper.swift in Sources */,
 				B725CDC528AE873D002B0743 /* FriendsService.swift in Sources */,
 				B725CDDE28AE8990002B0743 /* FriendDetailDomainModel.swift in Sources */,
+				B774828128F86D480067E98D /* FriendDetailRepositoryProtocol.swift in Sources */,
 				B725CDFD28AE8AD6002B0743 /* FriendsListViewModelProtocol.swift in Sources */,
 				B725CDC028AE86F4002B0743 /* CacheManager.swift in Sources */,
 				B725CED928AF8A53002B0743 /* SafariView.swift in Sources */,
@@ -806,6 +867,7 @@
 				B725CDE628AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift in Sources */,
 				B725CDCE28AE8818002B0743 /* FriendsDataModel.swift in Sources */,
 				B725CDD728AE888D002B0743 /* FriendsRepository.swift in Sources */,
+				B774827C28F86C2C0067E98D /* FriendDetailRepository.swift in Sources */,
 				B725CDFC28AE8AD6002B0743 /* FriendsListViewModel.swift in Sources */,
 				B725CEE528B3450A002B0743 /* FriendsRepositoryProtocol.swift in Sources */,
 				B7434D2B28B8F7E800E6AAE4 /* FriendsListRowViewModelProtocol.swift in Sources */,
@@ -848,8 +910,10 @@
 				B725CE7228AF8238002B0743 /* MockFriendsNetworkManager.swift in Sources */,
 				B725CE7128AF8238002B0743 /* MockFriendsRepository.swift in Sources */,
 				B725CE7428AF8238002B0743 /* MockFriendsListUseCase.swift in Sources */,
+				B774828328F86EEC0067E98D /* FriendDetailRepositoryTest.swift in Sources */,
 				B725CE7628AF8238002B0743 /* MockFriendsService.swift in Sources */,
 				B725CEDD28AFA18E002B0743 /* DataToDomainMapperTest.swift in Sources */,
+				B774828528F86FE20067E98D /* MockFriendDetailRepository.swift in Sources */,
 				B725CE6728AF8214002B0743 /* MockFriendDetailDomainModel.swift in Sources */,
 				B725CE5F28AF7EAD002B0743 /* MockURLProtocol.swift in Sources */,
 				B725CE9128AF850E002B0743 /* FriendDetailUseCaseTest.swift in Sources */,
@@ -1184,6 +1248,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		B774828628F872150067E98D /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B7B1883B28BF356C00D8081D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit";
@@ -1199,6 +1271,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7434D2E28BC959200E6AAE4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		B774828728F872150067E98D /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B774828628F872150067E98D /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 		B7B1883C28BF356C00D8081D /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;

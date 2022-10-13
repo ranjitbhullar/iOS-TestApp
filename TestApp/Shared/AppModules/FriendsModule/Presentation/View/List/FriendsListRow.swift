@@ -11,8 +11,14 @@ struct FriendsListRow: View {
     
     let item: FriendsListRowViewModel
     
+    public init(item: FriendsListRowViewModel) {
+        self.item = item
+        FriendsModule.registerFriendsDetail(friendId: item.friendId)
+    }
+    
     var body: some View {
-        NavigationLink(destination: FriendsModule.createFriendDetailView(friendId: item.friendId)) {
+        NavigationLink(destination: Dependency.container?.resolve(FriendDetailView.self))
+         {
             HStack {
                 AsyncImage(url: URL(string: item.avatarUrl ?? "")) { image in
                     image

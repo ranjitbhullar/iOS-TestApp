@@ -7,83 +7,64 @@
 
 import UIKit
 import SwiftUI
+import Swinject
 
 /// Builds up all the layer of Friends module.
-final class FriendsModule {
-
-    static let networkManager: NetworkManagerProtocol = NetworkManger()
-}
-
-// MARK: - Friends Listing Dependenices
-// Builds up all the layer of Friends List.
-extension FriendsModule {
-
-    static func createFriendListView() -> FriendsListView {
-
-        return FriendsListView(viewModel: createFriendsListViewModel())
+struct FriendsModule {
+    
+    // MARK: - Friends Listing Dependenices
+    // Builds up all the layer of Friends List.
+    static func registerDependencies() {
+        Dependency.container!.register(NetworkManagerProtocol.self) { r in
+            NetworkManger()
+        }
+        Dependency.container!.register(CacheManagerProtocol.self) { r in
+            CacheManager()
+        }
+        Dependency.container!.register(FriendsServiceProtocol.self) { r in
+            FriendsService(network: r.resolve(NetworkManagerProtocol.self)!)
+        }
+        Dependency.container!.register(FriendsDataStoreProtocol.self) { r in
+            FriendsDataStore(service: r.resolve(FriendsServiceProtocol.self)!,
+                             cacheManager: r.resolve(CacheManagerProtocol.self)!)
+        }
+        Dependency.container!.register(FriendsDataToDomainMapperProtocol.self) { r in
+            FriendsDataToDomainMapper()
+        }
+        Dependency.container!.register(FriendsRepositoryProtocol.self) { r in
+            FriendsRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(FriendsDataToDomainMapperProtocol.self)!)
+        }
+        Dependency.container!.register(FriendsListUseCaseProtocol.self) { r in
+            FriendsListUseCase(repository: r.resolve(FriendsRepositoryProtocol.self)!)
+        }
+        
+        Dependency.container!.register(FriendsListViewModel.self) { r in
+            FriendsListViewModel(useCase: r.resolve(FriendsListUseCaseProtocol.self)!)
+        }
+        Dependency.container!.register(FriendsListView.self) { r in
+            FriendsListView(viewModel: r.resolve(FriendsListViewModel.self)!)
+        }
     }
     
-    //injecting use case layer
-    static func createFriendsListViewModel() -> FriendsListViewModel {
-        let viewModel = FriendsListViewModel(useCase: createFriendsListUseCase())
-        return viewModel
-    }
-    
-    //injecting repository layer
-    static func createFriendsListUseCase() -> FriendsListUseCaseProtocol {
-        let useCase = FriendsListUseCase(repository: createFriendsRepository())
-        return useCase
-    }
-}
-
-// MARK: - Friends Detail Dependenices
-// Builds up all the layer of Friends Detail Screen.
-extension FriendsModule {
-
-    static func createFriendDetailView(friendId: String) -> FriendDetailView {
-
-        return FriendDetailView(viewModel: createFriendDetailViewModel(friendId: friendId))
-    }
-    
-    ///use case injected to view model
-    static func createFriendDetailViewModel(friendId: String) -> FriendDetailViewModel {
-        let viewModel = FriendDetailViewModel(friendId: friendId, useCase: createFriendDetailUseCase())
-        return viewModel
-    }
-
-    
-    //injecting repository layer
-    static func createFriendDetailUseCase() -> FriendsDetailUseCaseProtocol {
-        let useCase = FriendsDetailUseCase(repository: createFriendsRepository())
-        return useCase
-    }
-}
-
-// MARK: - Common Dependenices
-/// Builds up all the common layer depencies
-extension FriendsModule {
-    
-    //injecting data layer
-    static func createFriendsRepository() -> FriendsRepositoryProtocol {
-        let repository = FriendsRepository(dataStore: createDataStore())
-        return repository
-    }
-    
-    //injecting data service layer
-    static func createDataStore() -> FriendsDataStoreProtocol {
-        let dataStore = FriendsDataStore(service: createFriendsService(), cacheManager:createCache())
-        return dataStore
-    }
-    
-    // injecting network layer
-    static func createFriendsService() -> FriendsServiceProtocol {
-        let service = FriendsService(network: networkManager)
-        return service
-    }
-    
-    // injecting cache layer
-    static func createCache() -> CacheManager {
-        let cacheManager = CacheManager()
-        return cacheManager
+    // MARK: - Friends Detail Dependenices
+    // Builds up all the layer of Friends Detail Screen.
+    static func registerFriendsDetail(friendId: String) {
+        
+        Dependency.container!.register(FriendDataToDomainMapperProtocol.self) { r in
+            FriendDataToDomainMapper()
+        }
+        Dependency.container!.register(FriendDetailRepositoryProtocol.self) { r in
+            FriendDetailRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(FriendDataToDomainMapperProtocol.self)!)
+        }
+        Dependency.container!.register(FriendsDetailUseCaseProtocol.self) { r in
+            FriendsDetailUseCase(repository: r.resolve(FriendDetailRepositoryProtocol.self)!)
+        }
+        Dependency.container!.register(FriendDetailViewModel.self) { r in
+            FriendDetailViewModel(friendId: friendId,
+                                   useCase: r.resolve(FriendsDetailUseCaseProtocol.self)!)
+        }
+        Dependency.container!.register(FriendDetailView.self) { r in
+            FriendDetailView(viewModel: r.resolve(FriendDetailViewModel.self)!)
+        }
     }
 }

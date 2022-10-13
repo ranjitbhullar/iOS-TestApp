@@ -21,13 +21,13 @@ class FriendsModuleTest: XCTestCase {
     }
 
     
-    func testCreateFriendDetailViewModelCreation() {
-        expectation = expectation(description: "Success case")
-        let detailViewModel = FriendsModule.createFriendDetailViewModel(friendId: "123")
-        XCTAssertEqual(detailViewModel.friendId, "123")
-        expectation.fulfill()
-        wait(for: [expectation], timeout: 1.0)
-    }
+//    func testCreateFriendDetailViewModelCreation() {
+//        expectation = expectation(description: "Success case")
+//        let detailViewModel = FriendsModule.createFriendDetailViewModel(friendId: "123")
+//        XCTAssertEqual(detailViewModel.friendId, "123")
+//        expectation.fulfill()
+//        wait(for: [expectation], timeout: 1.0)
+//    }
    
 
 }

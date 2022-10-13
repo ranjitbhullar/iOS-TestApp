@@ -14,7 +14,7 @@ class DataToDomainMapperTest: XCTestCase  {
     var expectation: XCTestExpectation!
 
     override func setUpWithError() throws {
-        mapper = FriendsDataToDomainMapper(dataModel: MockFriendsData.friends ?? [])
+        mapper = FriendsDataToDomainMapper()
     }
 
     override func tearDownWithError() throws {
@@ -23,7 +23,7 @@ class DataToDomainMapperTest: XCTestCase  {
     
     func testDataToDomainMapper() {
         expectation = expectation(description: "Success case")
-        let domainModel = mapper?.dataToDomainMapper()
+        let domainModel = mapper?.transform(data: MockFriendsData.friends ?? [])
         if (domainModel != nil) {
             expectation.fulfill()
         }

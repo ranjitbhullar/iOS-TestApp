@@ -35,7 +35,7 @@ class FriendDetailSnapshotTest: XCTestCase {
     func testFriendsDetails() {
         
         let friendDetailView: FriendDetailView = FriendDetailView(viewModel: detailViewModel!)
-//        isRecording = true
+        //isRecording = true
         assertSnapshot(matching: friendDetailView.toViewController(), as: .image)
     }
 }
