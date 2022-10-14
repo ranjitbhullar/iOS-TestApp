@@ -46,9 +46,14 @@ struct FriendsModule {
         }
     }
     
+    static func getFriendsListView() -> FriendsListView {
+       
+        return (Dependency.container?.resolve(FriendsListView.self))!
+    }
+    
     // MARK: - Friends Detail Dependenices
     // Builds up all the layer of Friends Detail Screen.
-    static func registerFriendsDetail(friendId: String) {
+    static func registerFriendDetail(friendId: String) {
         
         Dependency.container!.register(FriendDataToDomainMapperProtocol.self) { r in
             FriendDataToDomainMapper()
@@ -66,5 +71,10 @@ struct FriendsModule {
         Dependency.container!.register(FriendDetailView.self) { r in
             FriendDetailView(viewModel: r.resolve(FriendDetailViewModel.self)!)
         }
+    }
+    
+    static func getFriendDetailView(friendId: String) -> FriendDetailView {
+        registerFriendDetail(friendId: friendId)
+        return (Dependency.container?.resolve(FriendDetailView.self))!
     }
 }

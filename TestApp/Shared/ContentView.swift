@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Swinject
 
 struct ContentView: View {
     
@@ -16,11 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            initializeView()
+            FriendsModule.getFriendsListView()
         }
-    }
-    
-    func initializeView() -> FriendsListView {
-        return (Dependency.container?.resolve(FriendsListView.self))!
     }
 }

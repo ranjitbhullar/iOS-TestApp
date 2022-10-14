@@ -13,11 +13,10 @@ struct FriendsListRow: View {
     
     public init(item: FriendsListRowViewModel) {
         self.item = item
-        FriendsModule.registerFriendsDetail(friendId: item.friendId)
     }
     
     var body: some View {
-        NavigationLink(destination: Dependency.container?.resolve(FriendDetailView.self))
+        NavigationLink(destination: FriendsModule.getFriendDetailView(friendId: self.item.friendId))
          {
             HStack {
                 AsyncImage(url: URL(string: item.avatarUrl ?? "")) { image in
