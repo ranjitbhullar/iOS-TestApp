@@ -33,7 +33,7 @@ struct FriendsDataStore: FriendsDataStoreProtocol {
     }
     
     func fetchFriendsData() -> FriendsResponse {
-        let cacheKey = AppConstants.ApiEndpoints.friendsApiUrl
+        let cacheKey = DataConstants.ApiEndpoints.friendsApiPath
         if let model = cacheManager.objectForKey(key: cacheKey) {
             return model as! FriendsResponse
         }

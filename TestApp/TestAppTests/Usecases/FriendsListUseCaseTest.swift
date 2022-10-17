@@ -42,11 +42,11 @@ class FriendsListUseCaseTest: XCTestCase {
     func testUseCase_Failure() {
         expectation = expectation(description: "Failure")
         
-        repository = MockFriendsRepository(error: NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kUseCaseFailedErrorMessage]))
+        repository = MockFriendsRepository(error: NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   TestConstants.ErrorConstants.kUseCaseFailedErrorMessage]))
         useCase = FriendsListUseCase(repository: repository!)
         useCase?.getFriends()
             .catch { error in
-                XCTAssertTrue(error.localizedDescription ==   AppConstants.ErrorConstants.kUseCaseFailedErrorMessage)
+                XCTAssertTrue(error.localizedDescription ==   TestConstants.ErrorConstants.kUseCaseFailedErrorMessage)
                 self.expectation.fulfill()
             }
 

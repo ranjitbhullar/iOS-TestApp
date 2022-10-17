@@ -83,14 +83,14 @@ class FriendsDataStoreTest: XCTestCase {
     func testDataStoreWithFriendId_Failure() {
         let expecatation = expectation(description: "Failure")
         
-        mockService = MockFriendsService(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
+        mockService = MockFriendsService(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   TestConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
         mockCacheManager = MockCacheManager()
         friendsDataStore = FriendsDataStore(service: mockService!, cacheManager: mockCacheManager!)
         
         guard let friendsDataStore = friendsDataStore else { return }
         friendsDataStore.fetchFriendWith(friendId: "123")
             .catch {error in
-                XCTAssertEqual(error.localizedDescription,  AppConstants.ErrorConstants.kRepositoryFailedErrorMessage)
+                XCTAssertEqual(error.localizedDescription,  TestConstants.ErrorConstants.kRepositoryFailedErrorMessage)
                 expecatation.fulfill()
             }
 

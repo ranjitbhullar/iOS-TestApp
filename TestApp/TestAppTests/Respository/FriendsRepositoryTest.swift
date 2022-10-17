@@ -41,13 +41,13 @@ class FriendsRepositoryTest: XCTestCase {
     func testRepositoryFriendsList_Failure() {
         let expecatation = expectation(description: "Failure")
         
-        mockDataStore = MockFriendsDataStore(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
+        mockDataStore = MockFriendsDataStore(error: NSError(domain: "com.test.error", code: 0, userInfo: [NSLocalizedDescriptionKey:   TestConstants.ErrorConstants.kRepositoryFailedErrorMessage]))
         friendsRepository = FriendsRepository(dataStore: mockDataStore!, mapper: FriendsDataToDomainMapper())
         
         guard let friendsRepository = friendsRepository else { return }
         friendsRepository.getFriends()
             .catch {error in
-                XCTAssertTrue(error.localizedDescription ==   AppConstants.ErrorConstants.kRepositoryFailedErrorMessage)
+                XCTAssertTrue(error.localizedDescription ==   TestConstants.ErrorConstants.kRepositoryFailedErrorMessage)
                 expecatation.fulfill()
             }
 

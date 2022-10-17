@@ -39,13 +39,13 @@ class FriendsServiceTest: XCTestCase {
     func testService_Error() {
         let expecatation = expectation(description: "Friends service on success case")
         
-        mockNetworkManager = MockFriendsNetworkManager(error: NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:  AppConstants.ErrorConstants.kServiceFailedErrorMeesage]))
+        mockNetworkManager = MockFriendsNetworkManager(error: NSError(domain: "com.example.error", code: 0, userInfo: [NSLocalizedDescriptionKey:  TestConstants.ErrorConstants.kServiceFailedErrorMeesage]))
         friendsService = FriendsService(network: mockNetworkManager!)
         
         guard let friendsService = friendsService else { return }
         friendsService.makeNetworkRequest()
             .catch {error in
-                XCTAssertEqual(error.localizedDescription, AppConstants.ErrorConstants.kServiceFailedErrorMeesage)
+                XCTAssertEqual(error.localizedDescription, TestConstants.ErrorConstants.kServiceFailedErrorMeesage)
                 expecatation.fulfill()
             }
         wait(for: [expecatation], timeout: 1.0)

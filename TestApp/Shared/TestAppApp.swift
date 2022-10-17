@@ -13,6 +13,7 @@ struct TestAppApp: App {
   
     public init() {
         let _ = Dependency(container: Container())
+        print(API.baseURL)
     }
     var body: some Scene {
         WindowGroup {
