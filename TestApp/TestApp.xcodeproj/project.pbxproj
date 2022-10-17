@@ -28,9 +28,7 @@
 		B725CDE128AE89BB002B0743 /* FriendsDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDDF28AE89BB002B0743 /* FriendsDataStoreProtocol.swift */; };
 		B725CDE228AE89BB002B0743 /* FriendsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDE028AE89BB002B0743 /* FriendsDataStore.swift */; };
 		B725CDE528AE89E7002B0743 /* FirendsDataToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDE328AE89E7002B0743 /* FirendsDataToDomainMapper.swift */; };
-		B725CDE628AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDE428AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift */; };
 		B725CDE928AE89EF002B0743 /* FriendDataToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDE728AE89EF002B0743 /* FriendDataToDomainMapper.swift */; };
-		B725CDEA28AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDE828AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift */; };
 		B725CDF028AE8A61002B0743 /* FriendsListUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDEE28AE8A61002B0743 /* FriendsListUseCaseProtocol.swift */; };
 		B725CDF128AE8A61002B0743 /* FriendsListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDEF28AE8A61002B0743 /* FriendsListUseCase.swift */; };
 		B725CDF628AE8A7F002B0743 /* FriendsDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B725CDF428AE8A7F002B0743 /* FriendsDetailUseCase.swift */; };
@@ -81,6 +79,7 @@
 		B774828528F86FE20067E98D /* MockFriendDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828428F86FE20067E98D /* MockFriendDetailRepository.swift */; };
 		B774828828F872150067E98D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B774828728F872150067E98D /* Swinject */; };
 		B774828B28F8727B0067E98D /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828A28F8727B0067E98D /* Dependency.swift */; };
+		B774828F28F94B4E0067E98D /* DataToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774828E28F94B4E0067E98D /* DataToDomainMapperProtocol.swift */; };
 		B7B1883D28BF356C00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883C28BF356C00D8081D /* PromiseKit */; };
 		B7B1883F28BF361E00D8081D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7B1883E28BF361E00D8081D /* PromiseKit */; };
 /* End PBXBuildFile section */
@@ -127,9 +126,7 @@
 		B725CDDF28AE89BB002B0743 /* FriendsDataStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDataStoreProtocol.swift; sourceTree = "<group>"; };
 		B725CDE028AE89BB002B0743 /* FriendsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDataStore.swift; sourceTree = "<group>"; };
 		B725CDE328AE89E7002B0743 /* FirendsDataToDomainMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendsDataToDomainMapper.swift; sourceTree = "<group>"; };
-		B725CDE428AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirendsDataToDomainMapperProtocol.swift; sourceTree = "<group>"; };
 		B725CDE728AE89EF002B0743 /* FriendDataToDomainMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDataToDomainMapper.swift; sourceTree = "<group>"; };
-		B725CDE828AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDataToDomainMapperProtocol.swift; sourceTree = "<group>"; };
 		B725CDEE28AE8A61002B0743 /* FriendsListUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListUseCaseProtocol.swift; sourceTree = "<group>"; };
 		B725CDEF28AE8A61002B0743 /* FriendsListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListUseCase.swift; sourceTree = "<group>"; };
 		B725CDF428AE8A7F002B0743 /* FriendsDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsDetailUseCase.swift; sourceTree = "<group>"; };
@@ -179,6 +176,7 @@
 		B774828228F86EEC0067E98D /* FriendDetailRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailRepositoryTest.swift; sourceTree = "<group>"; };
 		B774828428F86FE20067E98D /* MockFriendDetailRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFriendDetailRepository.swift; sourceTree = "<group>"; };
 		B774828A28F8727B0067E98D /* Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		B774828E28F94B4E0067E98D /* DataToDomainMapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataToDomainMapperProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +377,7 @@
 		B725CDD128AE8852002B0743 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				B774828E28F94B4E0067E98D /* DataToDomainMapperProtocol.swift */,
 				B725CDD228AE8859002B0743 /* List */,
 				B725CDD328AE885F002B0743 /* Detail */,
 			);
@@ -389,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				B725CDE328AE89E7002B0743 /* FirendsDataToDomainMapper.swift */,
-				B725CDE428AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -398,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				B725CDE728AE89EF002B0743 /* FriendDataToDomainMapper.swift */,
-				B725CDE828AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -844,10 +841,10 @@
 				B71A93F028AE62F10005D408 /* ContentView.swift in Sources */,
 				B725CE1228AE9077002B0743 /* FriendDetailView.swift in Sources */,
 				B725CDB728AE8658002B0743 /* NetworkManger.swift in Sources */,
-				B725CDEA28AE89EF002B0743 /* FriendDataToDomainMapperProtocol.swift in Sources */,
 				B725CDF728AE8A7F002B0743 /* FriendsDetailUseCaseProtocol.swift in Sources */,
 				B725CDC628AE873D002B0743 /* FriendsServiceProtocol.swift in Sources */,
 				B725CDF028AE8A61002B0743 /* FriendsListUseCaseProtocol.swift in Sources */,
+				B774828F28F94B4E0067E98D /* DataToDomainMapperProtocol.swift in Sources */,
 				B725CDF128AE8A61002B0743 /* FriendsListUseCase.swift in Sources */,
 				B725CE0E28AE8E88002B0743 /* FriendsListRow.swift in Sources */,
 				B725CDDC28AE8965002B0743 /* FriendsListDomainModel.swift in Sources */,
@@ -864,7 +861,6 @@
 				B725CDE128AE89BB002B0743 /* FriendsDataStoreProtocol.swift in Sources */,
 				B71A93EE28AE62F10005D408 /* TestAppApp.swift in Sources */,
 				B725CE1E28AEA444002B0743 /* FriendDetailViewModel.swift in Sources */,
-				B725CDE628AE89E7002B0743 /* FirendsDataToDomainMapperProtocol.swift in Sources */,
 				B725CDCE28AE8818002B0743 /* FriendsDataModel.swift in Sources */,
 				B725CDD728AE888D002B0743 /* FriendsRepository.swift in Sources */,
 				B774827C28F86C2C0067E98D /* FriendDetailRepository.swift in Sources */,

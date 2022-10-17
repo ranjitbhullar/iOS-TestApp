@@ -7,16 +7,18 @@
 
 import Foundation
 
-struct FriendsDataToDomainMapper: FriendsDataToDomainMapperProtocol {
+struct FriendsDataToDomainMapper: DataToDomainMapperProtocol {
     
-    func transform(data: [FriendDataModel]) -> [FriendsListDomainModel] {
+    func transform<T, S>(data: T) -> S {
+        
+        let friendDto  = data as! [FriendDataModel]
         var friends : [FriendsListDomainModel]  = []
-        data.forEach { data in
+        friendDto.forEach { data in
             let domainModel = FriendsListDomainModel(friendId: String(data.id),
                                                     nickname: data.login,
                                                      avatarUrl: data.avatarUrl)
             friends.append(domainModel)
         }
-        return friends
+        return friends as! S
     }
 }

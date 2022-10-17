@@ -23,13 +23,11 @@ class DataToDomainMapperTest: XCTestCase  {
     
     func testDataToDomainMapper() {
         expectation = expectation(description: "Success case")
-        let domainModel = mapper?.transform(data: MockFriendsData.friends ?? [])
-        if (domainModel != nil) {
-            expectation.fulfill()
-        }
-        else {
-            XCTFail("Failed to map domain model")
-        }
+        let domainModelList: [FriendsListDomainModel] = mapper!.transform(data: MockFriendsData.friends)
+        XCTAssertNotNil(domainModelList, "Failed to map domain model")
+        XCTAssertGreaterThanOrEqual(domainModelList.count, 1, "Failed to map domain model")
+        expectation.fulfill()
+        
         wait(for: [expectation], timeout: 1.0)
     }
 }

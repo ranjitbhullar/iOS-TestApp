@@ -17,7 +17,6 @@ struct FriendsService: FriendsServiceProtocol {
         self.network = network
     }
     
-    
     func makeNetworkRequest() -> FriendsResponse {
         let endPoint = AppConstants.ApiEndpoints.friendsApiUrl
         let url = URL(string: endPoint)

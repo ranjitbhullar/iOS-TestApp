@@ -11,9 +11,9 @@ import PromiseKit
 struct FriendDetailRepository: FriendDetailRepositoryProtocol {
     
     private let dataStore: FriendsDataStoreProtocol
-    private let mapper: FriendDataToDomainMapperProtocol
+    private let mapper: DataToDomainMapperProtocol
     
-    init(dataStore: FriendsDataStoreProtocol, mapper: FriendDataToDomainMapperProtocol) {
+    init(dataStore: FriendsDataStoreProtocol, mapper: DataToDomainMapperProtocol) {
         self.dataStore = dataStore
         self.mapper = mapper
     }

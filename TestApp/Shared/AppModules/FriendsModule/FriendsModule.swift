@@ -28,11 +28,11 @@ struct FriendsModule {
             FriendsDataStore(service: r.resolve(FriendsServiceProtocol.self)!,
                              cacheManager: r.resolve(CacheManagerProtocol.self)!)
         }
-        Dependency.container!.register(FriendsDataToDomainMapperProtocol.self) { r in
+        Dependency.container!.register(DataToDomainMapperProtocol.self) { r in
             FriendsDataToDomainMapper()
         }
         Dependency.container!.register(FriendsRepositoryProtocol.self) { r in
-            FriendsRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(FriendsDataToDomainMapperProtocol.self)!)
+            FriendsRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(DataToDomainMapperProtocol.self)!)
         }
         Dependency.container!.register(FriendsListUseCaseProtocol.self) { r in
             FriendsListUseCase(repository: r.resolve(FriendsRepositoryProtocol.self)!)
@@ -55,11 +55,11 @@ struct FriendsModule {
     // Builds up all the layer of Friends Detail Screen.
     static func registerFriendDetail(friendId: String) {
         
-        Dependency.container!.register(FriendDataToDomainMapperProtocol.self) { r in
+        Dependency.container!.register(DataToDomainMapperProtocol.self) { r in
             FriendDataToDomainMapper()
         }
         Dependency.container!.register(FriendDetailRepositoryProtocol.self) { r in
-            FriendDetailRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(FriendDataToDomainMapperProtocol.self)!)
+            FriendDetailRepository(dataStore: r.resolve(FriendsDataStoreProtocol.self)!, mapper: r.resolve(DataToDomainMapperProtocol.self)!)
         }
         Dependency.container!.register(FriendsDetailUseCaseProtocol.self) { r in
             FriendsDetailUseCase(repository: r.resolve(FriendDetailRepositoryProtocol.self)!)
