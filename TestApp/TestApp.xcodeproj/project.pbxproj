@@ -187,6 +187,7 @@
 		B77482BA28FD582A0067E98D /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
 		B77482BF28FD58FB0067E98D /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
 		B77482C228FD5B380067E98D /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		B77482C428FD95E50067E98D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +289,7 @@
 		B725CD9F28AE84B5002B0743 /* TestAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B77482C428FD95E50067E98D /* Info.plist */,
 				B725CDA928AE84DE002B0743 /* FriendsUITests.swift */,
 				B725CDA028AE84B5002B0743 /* TestAppUITests.swift */,
 				B725CDA228AE84B5002B0743 /* TestAppUITestsLaunchTests.swift */,
@@ -980,6 +982,7 @@
 /* Begin XCBuildConfiguration section */
 		B71A93F428AE62F10005D408 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B428FD526A0067E98D /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1089,6 +1092,7 @@
 		};
 		B71A93F728AE62F10005D408 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B428FD526A0067E98D /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1158,10 +1162,12 @@
 		};
 		B725CDA728AE84B5002B0743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B428FD526A0067E98D /* Development.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ps.test.TestAppUITests;
@@ -1180,6 +1186,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ps.test.TestAppUITests;
@@ -1335,10 +1342,12 @@
 		};
 		B77482A928FD52210067E98D /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B428FD526A0067E98D /* Development.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ps.test.TestAppUITests;
@@ -1353,6 +1362,7 @@
 		};
 		B77482AA28FD52210067E98D /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B428FD526A0067E98D /* Development.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1469,10 +1479,12 @@
 		};
 		B77482AD28FD522A0067E98D /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B528FD526A0067E98D /* QA.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ps.test.TestAppUITests;
@@ -1487,6 +1499,7 @@
 		};
 		B77482AE28FD522A0067E98D /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77482B528FD526A0067E98D /* QA.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1607,6 +1620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ps.test.TestAppUITests;

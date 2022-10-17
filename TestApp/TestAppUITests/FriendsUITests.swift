@@ -26,13 +26,13 @@ class FriendsUITests: XCTestCase {
         
         //Gets an array of cells
         let tableCells = friendsTableView.cells
-        XCTAssert(tableCells.element.waitForExistence(timeout: 3.0))
+        XCTAssert(tableCells.element.waitForExistence(timeout: 3.0), "Not able to find table cells")
         
         if tableCells.count > 0 {
             //Loop through only first 4 cell.
             let count: Int = (tableCells.count > 4) ? 4 : (tableCells.count - 1)
             
-            let expectation = expectation(description: "Wait for table cells")
+            let expectation = expectation(description: "Validate tableview cells")
             
             for i in stride(from: 0, to: count , by: 1) {
                 // Grab the first cell and verify that it exists and tap it
